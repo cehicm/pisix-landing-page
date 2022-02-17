@@ -38,6 +38,14 @@ h5 {
 }
 
 //Section styles
+.nav__item a {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 14px;
+	letter-spacing: 0.004em;
+	color: colors.$light-black;
+}
+
 .about {
 	&__text {
 		&--light {
@@ -219,3 +227,9 @@ h5 {
 		letter-spacing: 0.02em;
 	}
 }
+
+img {
+	width: 100px;
+}
+
+///

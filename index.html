@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<link rel="stylesheet" href="/dist/css/styles.css" />
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,14 +12,18 @@
 
 <body>
 	<header class="header">
-		<div class="header__navigation">
+
+
+		<nav class="nav">
 			<div class="logo logo--header">
 				<a href="#">
 					<img src="/src/images/pisix-logo.svg" alt="Pisix logo" />
 				</a>
 			</div>
-
-			<nav class="nav">
+			<svg class="nav__menu__icon" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+				<path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"></path>
+			</svg>
+			<div class="nav__menu">
 				<ul class="nav__list">
 					<li class="nav__item">
 						<a href="#">HOME</a>
@@ -36,36 +41,52 @@
 						<a href="#">CONTACTS</a>
 					</li>
 				</ul>
-			</nav>
+				<div class="nav__search">
+					<svg class="nav__search__icon" width="29" height="29" viewBox="0 0 29 29" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<g opacity="0.4">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M12.0492 1C18.1508 1 23.0983 5.94625 23.0983 12.0492C23.0983 18.1521 18.1508 23.0983 12.0492 23.0983C5.94625 23.0983 1 18.1521 1 12.0492C1 5.94625 5.94625 1 12.0492 1Z"
+								stroke="#00BFC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M25.655 22.8269C24.0933 21.2652 22.1937 20.6332 21.4138 21.4131C20.632 22.1949 21.2649 24.0936 22.8266 25.6553C24.3883 27.217 26.2888 27.8518 27.0706 27.07C27.8505 26.2901 27.2167 24.3886 25.655 22.8269Z"
+								fill="#00BFC4" />
+						</g>
+					</svg>
 
-			<div class="header__navigation__search">
-				<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<g opacity="0.4">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M12.0492 1C18.1508 1 23.0983 5.94625 23.0983 12.0492C23.0983 18.1521 18.1508 23.0983 12.0492 23.0983C5.94625 23.0983 1 18.1521 1 12.0492C1 5.94625 5.94625 1 12.0492 1Z"
-							stroke="#00BFC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M25.655 22.8269C24.0933 21.2652 22.1937 20.6332 21.4138 21.4131C20.632 22.1949 21.2649 24.0936 22.8266 25.6553C24.3883 27.217 26.2888 27.8518 27.0706 27.07C27.8505 26.2901 27.2167 24.3886 25.655 22.8269Z"
-							fill="#00BFC4" />
-					</g>
-				</svg>
+					<input type="text" class="nav__search__input" name="search-input" id="search-input">
 
-				<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M10.7223 19.8994H1" stroke="#00788A" stroke-width="2" stroke-linecap="round"
-						stroke-linejoin="round" />
-					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M16.8242 19.9007C16.8242 22.9759 17.847 24.0001 20.9126 24.0001C23.9782 24.0001 25.001 22.9759 25.001 19.9007C25.001 16.8254 23.9782 15.8013 20.9126 15.8013C17.847 15.8013 16.8242 16.8254 16.8242 19.9007Z"
-						fill="#00788A" />
-					<path d="M15.2793 4.10104H25.0003" stroke="#00788A" stroke-width="2" stroke-linecap="round"
-						stroke-linejoin="round" />
-					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M9.17808 4.09939C9.17808 1.02552 8.15531 0 5.08971 0C2.02276 0 1 1.02552 1 4.09939C1 7.17461 2.02276 8.19878 5.08971 8.19878C8.15531 8.19878 9.17808 7.17461 9.17808 4.09939Z"
-						fill="#00788A" />
-				</svg>
+					<svg class="nav__search__input__close" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000"
+						enable-background="new 0 0 1000 1000" xml:space="preserve">
+						<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+						<g>
+							<path
+								d="M22.3,81.9C6.1,65.8,6,39,22.5,22.5C39.1,5.9,65.6,5.9,81.9,22.3L500,440.3L918.1,22.3c16.1-16.1,43-16.3,59.5,0.2c16.6,16.6,16.6,43.1,0.2,59.5L559.7,500l418.1,418.1c16.1,16.1,16.3,43-0.2,59.5c-16.6,16.6-43.1,16.6-59.5,0.2L500,559.7L81.9,977.7c-16.1,16.1-43,16.3-59.5-0.2c-16.6-16.6-16.6-43.1-0.2-59.5L440.3,500L22.3,81.9z" />
+						</g>
+					</svg>
+
+					<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10.7223 19.8994H1" stroke="#00788A" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M16.8242 19.9007C16.8242 22.9759 17.847 24.0001 20.9126 24.0001C23.9782 24.0001 25.001 22.9759 25.001 19.9007C25.001 16.8254 23.9782 15.8013 20.9126 15.8013C17.847 15.8013 16.8242 16.8254 16.8242 19.9007Z"
+							fill="#00788A" />
+						<path d="M15.2793 4.10104H25.0003" stroke="#00788A" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M9.17808 4.09939C9.17808 1.02552 8.15531 0 5.08971 0C2.02276 0 1 1.02552 1 4.09939C1 7.17461 2.02276 8.19878 5.08971 8.19878C8.15531 8.19878 9.17808 7.17461 9.17808 4.09939Z"
+							fill="#00788A" />
+					</svg>
+				</div>
 			</div>
-		</div>
+
+		</nav>
+
+
+
 		<div class="header__hero">
-			<h1 class="hero__suptitle">YOUR BUSINESS</h1>
+			<h1 class="hero__suptitle suptitle--blue">YOUR BUSINESS</h1>
 			<h2 class="hero__title">We execute our ideas from start to finish</h2>
 			<button class="button button--hero">Explore More</button>
 			<a class="hero__link" href="#">Watch Videos</a>
@@ -78,8 +99,8 @@
 				<img src="/src/images/main-image.png" alt="Two men and a woman standing with hands in front of her" />
 			</div>
 			<div class="main__content">
-				<h2 class="main__suptitle">ABOUT US</h2>
-				<h3 class="main__title">
+				<h2 class="main__suptitle suptitle--blue">ABOUT US</h2>
+				<h3 class="main__title title--blue">
 					We deal With The Aspects of Professional IT Services
 				</h3>
 				<p class="main__text">
@@ -139,8 +160,8 @@
 
 	<section class="services">
 		<div class="services__wrapper">
-			<h2 class="services__suptitle">Service</h2>
-			<h3 class="services__title">
+			<h2 class="services__suptitle suptitle--blue">SERVICE</h2>
+			<h3 class="services__title title--blue">
 				Service Thats Lead The Way to Better Business
 			</h3>
 
@@ -167,7 +188,7 @@
 					<img class="services__image" src="/src/images/icons/services/business-plan.svg"
 						alt="Business plan image" />
 					<h4 class="service__title">Business Plan</h4>
-					<p class="service__text">
+					<p class="service__text ">
 						Business Plan Experience is repudandae fugia rchitecto beatea
 						rederit.
 					</p>
@@ -233,13 +254,13 @@
 				</button>
 			</div>
 			<div class="about__content">
-				<h2 class="about__suptitle">ABOUT THE COMPANY</h2>
-				<h3 class="about__title">Creative Solutions</h3>
-				<p class="about__text about__text--dark">
+				<h2 class="about__suptitle suptitle--blue">ABOUT THE COMPANY</h2>
+				<h3 class="about__title title--blue">Creative Solutions</h3>
+				<p class="about__text">
 					Perferendis repudandae fugia rchitecto beatea reder svitae recusa
 					ndae debitifacere uiimi placeat maxienui
 				</p>
-				<p class="about__text">
+				<p class="about__text about__text--light">
 					Perferendis repudandae fugia rchitecto beatea rederit svitae recusa
 					ndae debitifacere uiimi placeat maxienui Perferendis repudandae
 					fugia rchitecto beatea rederit svitae recusa ndae debitifacere uiimi
@@ -272,13 +293,22 @@
 							</filter>
 						</defs>
 					</svg>
-					<h4>Watch Our Two Minute Intro</h4>
+					<h4 class="about__watch__text">Watch Our Two Minute Intro</h4>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="filter">
+		<div class="filter__tab">
+			<ul class="tab__list">
+				<li class="tab__list__item tab__list__item--all">All</li>
+				<li class="tab__list__item">Coaching</li>
+				<li class="tab__list__item">Facilitation</li>
+				<li class="tab__list__item">Stakeholder Relations</li>
+				<li class="tab__list__item">Strategy</li>
+			</ul>
+		</div>
 		<div class="filter__wrapper">
 			<div class="filter__images">
 				<img class="" src="/src/images/service-coaching.png"
@@ -302,7 +332,7 @@
 	<section class="achievement">
 		<div class="achievement__wrapper">
 			<div class="achievement__text">
-				<h2 class="achievement__title">Our Achievements</h2>
+				<h2 class="achievement__title title--blue">Our Achievements</h2>
 				<p class="achievement__text">
 					Perferendis repudandae fugia rchitecto beatea rederit svitae recusa
 					ndae debitifacere.
@@ -325,9 +355,9 @@
 					<h3 class="numbers__title">50</h3>
 					<p>Nationlal Awards Winner</p>
 				</div>
-				<div class="achievements__image">
-					<h3 class="achievements__image__title">25</h3>
-					<p class="achievements__image__text">
+				<div class="achievement__image">
+					<h3 class="achievement__image__title">25</h3>
+					<p class="achievement__image__text">
 						TYEARS OF EXPERIENCE IN THIS INDUSTRY
 					</p>
 				</div>
@@ -338,8 +368,8 @@
 	<section class="team">
 		<div class="team__wrapper">
 			<div class="team__content">
-				<h2 class="team__suptitle">Team</h2>
-				<h3 class="team__title">Professional Team</h3>
+				<h2 class="team__suptitle suptitle--blue">TEAM</h2>
+				<h3 class="team__title title--blue">Professional Team</h3>
 				<p class="team__text">
 					Perferendis repudandae fugia rchitecto beatea rederit svitae recusa
 					ndae debitifacere.
@@ -366,7 +396,7 @@
 
 	<section class="partners">
 		<div class="partners__wrapper">
-			<h2 class="partners__title">Our Most Honorable Partners</h2>
+			<h2 class="partners__title title--blue">Our Most Honorable Partners</h2>
 			<div class="partners__list">
 				<img src="/src/images/logos/Alibaba_Group-Logo.wine.svg" alt="Alibaba logo" />
 				<img src="/src/images/logos/Pinterest-Logo.wine.svg" alt="Pinterest logo" />
@@ -390,7 +420,7 @@
 						stroke="#00788A" stroke-width="2" />
 				</g>
 			</svg>
-			<h2 class="testimonials__title">Customer Stories</h2>
+			<h2 class="testimonials__title title--blue">Customer Stories</h2>
 			<div class="customer">
 				<div class="customer__content">
 					<h3 class="customer__name">Justin Pierre</h3>
