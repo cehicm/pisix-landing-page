@@ -1,3 +1,221 @@
-body {
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+//Base styles
+p,
+li,
+a {
+	font-family: "Poppins";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
 	font-family: "Josefin Sans";
+}
+
+//Shared styles
+.suptitle--blue,
+.about__watch__text,
+.customer__role,
+.footer__item,
+.footer__copyright {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 600;
+}
+
+.suptitle--blue {
+	color: colors.$aqua-blue;
+}
+
+.main__text,
+.achievement__text,
+.team__text {
+	font-size: 22px;
+}
+
+//Section styles
+.about {
+	&__text {
+		&--light {
+			color: colors.$light-black;
+		}
+	}
+
+	&__watch__text {
+		line-height: 24px;
+		color: colors.$dark-blue;
+	}
+}
+
+.title--blue {
+	font-size: 44px;
+	line-height: 60px;
+	letter-spacing: 0.01em;
+	color: colors.$dark-blue;
+}
+
+.main__text {
+	line-height: 34px;
+}
+
+.service__text,
+.main__bubble__text {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.main__bubble__title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 30px;
+	color: colors.$dark-blue;
+}
+
+.service {
+	&__title {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 35px;
+		letter-spacing: 0.02em;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 28px;
+		text-align: center;
+	}
+}
+
+.about__text,
+.newsletter__text {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.achievement {
+	&__text {
+		font-weight: 400;
+		line-height: 34px;
+	}
+
+	&__image {
+		&__title {
+			font-size: 46px;
+			font-weight: 800;
+			line-height: 46px;
+			letter-spacing: 0.02em;
+			color: colors.$white;
+		}
+
+		&__text {
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 22px;
+			letter-spacing: 0em;
+			color: colors.$white;
+		}
+	}
+}
+
+.partners {
+	&__title {
+		text-align: center;
+	}
+}
+
+.numbers {
+	&__title {
+		font-family: "Poppins";
+		font-size: 46px;
+		font-weight: 800;
+		line-height: 46px;
+		letter-spacing: 0.02em;
+	}
+
+	&__text {
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 12px;
+		color: colors.$light-black;
+	}
+}
+
+.team {
+	&__title {
+		text-align: center;
+	}
+
+	&__text {
+		font-weight: 400;
+		line-height: 34px;
+		text-align: center;
+	}
+}
+
+.tab__list__item {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+.customer {
+	&__name {
+		font-family: "Poppins";
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: 0.0025em;
+	}
+
+	&__role {
+		font-weight: 500;
+		letter-spacing: 0.0025em;
+	}
+
+	&__review {
+		font-size: 20px;
+		font-style: italic;
+		font-weight: 500;
+		line-height: 34px;
+		letter-spacing: 0.02em;
+	}
+}
+
+.newsletter {
+	&__title {
+		font-size: 44px;
+		line-height: 56px;
+		letter-spacing: 0.01em;
+		color: colors.$white;
+	}
+
+	&__text {
+		color: colors.$white;
+	}
+}
+
+.footer {
+	text-align: center;
+
+	&__item__title {
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 0.01em;
+	}
+
+	&__item,
+	&__copyright {
+		font-weight: 400;
+		line-height: 40px;
+		letter-spacing: 0.02em;
+	}
 }
