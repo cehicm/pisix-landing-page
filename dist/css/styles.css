@@ -36,12 +36,58 @@ h5 {
   font-size: 22px;
 }
 
+.button {
+  font-family: "Poppins";
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .button {
+    font-weight: 600;
+  }
+}
+
 .nav__item a {
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 0.004em;
   color: #083038;
+}
+
+.hero__suptitle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 80px;
+  right: 50%;
+  transform: translate(50%, 15%);
+  border-radius: 6px;
+  background-color: #00bfc4;
+}
+.hero__title {
+  font-size: 50px;
+  background: linear-gradient(90deg, #00788a 6.67%, #74dcdf 94.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+.hero__link {
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0em;
+  color: #43808c;
+  text-decoration: underline;
 }
 
 .about__text--light {
@@ -194,6 +240,23 @@ h5 {
   letter-spacing: 0.02em;
 }
 
+.button {
+  height: 70px;
+  width: 200px;
+  border-radius: 6px;
+  border: none;
+}
+.button--hero {
+  background-color: #00bfc4;
+  color: #ffffff;
+}
+.button--hero:hover {
+  filter: drop-shadow(2px 7px 6px #00bfc4);
+}
+.button--hero:active {
+  border: 1px solid #00788a;
+}
+
 img {
   width: 100px;
 }
@@ -262,6 +325,47 @@ a {
 
 .header {
   padding: 20px;
+  text-align: center;
+}
+.header__bg {
+  position: relative;
+}
+.header__bg img {
+  position: absolute;
+  z-index: -1;
+}
+.header__bg .quarter {
+  width: 15px;
+}
+.header__bg .quarter--blue {
+  top: 200px;
+  transform: translate(300%, 100%);
+}
+.header__bg .quarter--yellow {
+  top: 100px;
+  transform: translate(-700%, 100%);
+}
+.header__bg .quarter--orange {
+  transform: translate(600%, 100%);
+  top: 80px;
+}
+.header__bg .circle--pi {
+  transform: translate(150%, 100%);
+  width: 50px;
+}
+.header__bg .line--skewed {
+  transform: translate(-180%, 40%);
+}
+.header__bg .line--squigle {
+  transform: translate(80%, 40%);
+}
+.header .hero {
+  padding: 20px;
+}
+.header .hero__buttons {
+  display: grid;
+  row-gap: 20px;
+  justify-content: center;
 }
 
 /* poppins-300 - latin */

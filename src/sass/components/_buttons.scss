@@ -1,0 +1,22 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+.button {
+	height: 70px;
+	width: 200px;
+	border-radius: 6px;
+	border: none;
+
+	&--hero {
+		background-color: colors.$aqua-blue;
+		color: colors.$white;
+
+		&:hover {
+			filter: drop-shadow(2px 7px 6px colors.$aqua-blue);
+		}
+
+		&:active {
+			border: 1px solid colors.$dark-blue;
+		}
+	}
+}

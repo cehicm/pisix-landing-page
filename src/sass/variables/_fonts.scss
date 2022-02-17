@@ -37,6 +37,17 @@ h5 {
 	font-size: 22px;
 }
 
+.button {
+	font-family: "Poppins";
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+
+	@include sc-breakpoint(768) {
+		font-weight: 600;
+	}
+}
+
 //Section styles
 .nav__item a {
 	font-size: 14px;
@@ -44,6 +55,45 @@ h5 {
 	line-height: 14px;
 	letter-spacing: 0.004em;
 	color: colors.$light-black;
+}
+
+.hero {
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 80px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+		}
+	}
+
+	&__title {
+		font-size: 50px;
+		background: colors.$blue-green-gradient;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+
+		@include sc-breakpoint(1024) {
+			font-size: 100px;
+			line-height: 100px;
+		}
+	}
+
+	&__link {
+		font-family: "Josefin Sans";
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0em;
+		color: colors.$link-green;
+		text-decoration: underline;
+	}
 }
 
 .about {
@@ -227,9 +277,3 @@ h5 {
 		letter-spacing: 0.02em;
 	}
 }
-
-img {
-	width: 100px;
-}
-
-///

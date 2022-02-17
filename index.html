@@ -12,84 +12,92 @@
 
 <body>
 	<header class="header">
+		<div class="header__wrapper">
+			<div class="header__bg">
+				<img class="line line--skewed" src="/src/images/shapes/header/skewed-line.png" alt="">
+				<img class="line line--squigle" src="/src/images/shapes/header/squigle-line.png" alt="">
+				<img class="circle--pi" src="/src/images/shapes/header/aqua-circle.png" alt="">
+				<img class="quarter quarter--blue" src="/src/images/shapes/header/blue-quarter.png" alt="">
+				<img class="quarter quarter--orange" src="/src/images/shapes/header/orange-quarter.png" alt="">
+				<img class="quarter quarter--yellow" src="/src/images/shapes/header/yellow-quarter.png" alt="">
 
-
-		<nav class="nav">
-			<div class="logo logo--header">
-				<a href="#">
-					<img src="/src/images/pisix-logo.svg" alt="Pisix logo" />
-				</a>
 			</div>
-			<svg class="nav__menu__icon" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
-				<path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"></path>
-			</svg>
-			<div class="nav__menu">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<a href="#">HOME</a>
-					</li>
-					<li class="nav__item">
-						<a href="#">PAGES</a>
-					</li>
-					<li class="nav__item">
-						<a href="#">PORTFOLIO</a>
-					</li>
-					<li class="nav__item">
-						<a href="#">BLOG</a>
-					</li>
-					<li class="nav__item">
-						<a href="#">CONTACTS</a>
-					</li>
-				</ul>
-				<div class="nav__search">
-					<svg class="nav__search__icon" width="29" height="29" viewBox="0 0 29 29" fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<g opacity="0.4">
+			<nav class="nav">
+				<div class="logo logo--header">
+					<a href="#">
+						<img src="/src/images/pisix-logo.svg" alt="Pisix logo" />
+					</a>
+				</div>
+				<svg class="nav__menu__icon" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+					<path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"></path>
+				</svg>
+				<div class="nav__menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#">HOME</a>
+						</li>
+						<li class="nav__item">
+							<a href="#">PAGES</a>
+						</li>
+						<li class="nav__item">
+							<a href="#">PORTFOLIO</a>
+						</li>
+						<li class="nav__item">
+							<a href="#">BLOG</a>
+						</li>
+						<li class="nav__item">
+							<a href="#">CONTACTS</a>
+						</li>
+					</ul>
+					<div class="nav__search">
+						<svg class="nav__search__icon" width="29" height="29" viewBox="0 0 29 29" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g opacity="0.4">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M12.0492 1C18.1508 1 23.0983 5.94625 23.0983 12.0492C23.0983 18.1521 18.1508 23.0983 12.0492 23.0983C5.94625 23.0983 1 18.1521 1 12.0492C1 5.94625 5.94625 1 12.0492 1Z"
+									stroke="#00BFC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M25.655 22.8269C24.0933 21.2652 22.1937 20.6332 21.4138 21.4131C20.632 22.1949 21.2649 24.0936 22.8266 25.6553C24.3883 27.217 26.2888 27.8518 27.0706 27.07C27.8505 26.2901 27.2167 24.3886 25.655 22.8269Z"
+									fill="#00BFC4" />
+							</g>
+						</svg>
+
+						<input type="text" class="nav__search__input" name="search-input" id="search-input">
+
+						<svg class="nav__search__input__close" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+							viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+							<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+							<g>
+								<path
+									d="M22.3,81.9C6.1,65.8,6,39,22.5,22.5C39.1,5.9,65.6,5.9,81.9,22.3L500,440.3L918.1,22.3c16.1-16.1,43-16.3,59.5,0.2c16.6,16.6,16.6,43.1,0.2,59.5L559.7,500l418.1,418.1c16.1,16.1,16.3,43-0.2,59.5c-16.6,16.6-43.1,16.6-59.5,0.2L500,559.7L81.9,977.7c-16.1,16.1-43,16.3-59.5-0.2c-16.6-16.6-16.6-43.1-0.2-59.5L440.3,500L22.3,81.9z" />
+							</g>
+						</svg>
+
+						<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.7223 19.8994H1" stroke="#00788A" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
 							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M12.0492 1C18.1508 1 23.0983 5.94625 23.0983 12.0492C23.0983 18.1521 18.1508 23.0983 12.0492 23.0983C5.94625 23.0983 1 18.1521 1 12.0492C1 5.94625 5.94625 1 12.0492 1Z"
-								stroke="#00BFC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								d="M16.8242 19.9007C16.8242 22.9759 17.847 24.0001 20.9126 24.0001C23.9782 24.0001 25.001 22.9759 25.001 19.9007C25.001 16.8254 23.9782 15.8013 20.9126 15.8013C17.847 15.8013 16.8242 16.8254 16.8242 19.9007Z"
+								fill="#00788A" />
+							<path d="M15.2793 4.10104H25.0003" stroke="#00788A" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
 							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M25.655 22.8269C24.0933 21.2652 22.1937 20.6332 21.4138 21.4131C20.632 22.1949 21.2649 24.0936 22.8266 25.6553C24.3883 27.217 26.2888 27.8518 27.0706 27.07C27.8505 26.2901 27.2167 24.3886 25.655 22.8269Z"
-								fill="#00BFC4" />
-						</g>
-					</svg>
+								d="M9.17808 4.09939C9.17808 1.02552 8.15531 0 5.08971 0C2.02276 0 1 1.02552 1 4.09939C1 7.17461 2.02276 8.19878 5.08971 8.19878C8.15531 8.19878 9.17808 7.17461 9.17808 4.09939Z"
+								fill="#00788A" />
+						</svg>
+					</div>
+				</div>
+			</nav>
 
-					<input type="text" class="nav__search__input" name="search-input" id="search-input">
-
-					<svg class="nav__search__input__close" xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000"
-						enable-background="new 0 0 1000 1000" xml:space="preserve">
-						<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-						<g>
-							<path
-								d="M22.3,81.9C6.1,65.8,6,39,22.5,22.5C39.1,5.9,65.6,5.9,81.9,22.3L500,440.3L918.1,22.3c16.1-16.1,43-16.3,59.5,0.2c16.6,16.6,16.6,43.1,0.2,59.5L559.7,500l418.1,418.1c16.1,16.1,16.3,43-0.2,59.5c-16.6,16.6-43.1,16.6-59.5,0.2L500,559.7L81.9,977.7c-16.1,16.1-43,16.3-59.5-0.2c-16.6-16.6-16.6-43.1-0.2-59.5L440.3,500L22.3,81.9z" />
-						</g>
-					</svg>
-
-					<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M10.7223 19.8994H1" stroke="#00788A" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M16.8242 19.9007C16.8242 22.9759 17.847 24.0001 20.9126 24.0001C23.9782 24.0001 25.001 22.9759 25.001 19.9007C25.001 16.8254 23.9782 15.8013 20.9126 15.8013C17.847 15.8013 16.8242 16.8254 16.8242 19.9007Z"
-							fill="#00788A" />
-						<path d="M15.2793 4.10104H25.0003" stroke="#00788A" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M9.17808 4.09939C9.17808 1.02552 8.15531 0 5.08971 0C2.02276 0 1 1.02552 1 4.09939C1 7.17461 2.02276 8.19878 5.08971 8.19878C8.15531 8.19878 9.17808 7.17461 9.17808 4.09939Z"
-							fill="#00788A" />
-					</svg>
+			<div class="hero">
+				<h1 class="hero__suptitle suptitle--blue">YOUR BUSINESS</h1>
+				<h2 class="hero__title">We execute our ideas from start to finish</h2>
+				<div class="hero__buttons">
+					<button class="button button--hero">Explore More</button>
+					<a class="hero__link" href="#">Watch Videos</a>
 				</div>
 			</div>
-
-		</nav>
-
-
-
-		<div class="header__hero">
-			<h1 class="hero__suptitle suptitle--blue">YOUR BUSINESS</h1>
-			<h2 class="hero__title">We execute our ideas from start to finish</h2>
-			<button class="button button--hero">Explore More</button>
-			<a class="hero__link" href="#">Watch Videos</a>
 		</div>
 	</header>
 
