@@ -1,0 +1,107 @@
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	word-wrap: normal !important;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+
+	&.skip-link {
+		margin: 5px;
+	}
+
+	&:focus {
+		top: 5px;
+		left: 5px;
+		z-index: 100000;
+		display: block;
+		width: auto;
+		height: auto;
+		padding: 15px 23px 14px;
+		font-weight: var(--font-weight-bold);
+		font-size: 1.7rem;
+		line-height: normal;
+		text-decoration: none;
+		background-color: var(--color-white);
+		border-radius: 0;
+		box-shadow: 0 0 2px 2px rgba(22, 22, 22, .6);
+		clip: auto;
+		clip-path: none;
+	}
+}
+
+[data-whatinput="mouse"] *:focus,
+[data-whatinput="touch"] *:focus {
+	outline: none;
+}
+
+// Visually distinct focus color on keyboard
+[data-whatinput="keyboard"] {
+
+	a:focus,
+	button:focus,
+	div[tabindex]:focus,
+	input:focus,
+	select:focus,
+	textarea:focus {
+		opacity: 1;
+	}
+
+	.global-link {
+		transition: none;
+	}
+
+	// A bit better focus for large elements
+	a.global-link:focus {
+		outline-width: 4px;
+		outline-style: solid;
+		outline-offset: 5px;
+		transition: outline-offset .25s ease;
+	}
+}
+
+// Add icon to external links
+a.is-external-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&::after {
+		position: relative;
+		top: 0;
+		right: 0;
+		display: inline-flex;
+		width: 14px;
+		height: 14px;
+		margin-right: 2px;
+		margin-left: 5px;
+		background-image: url("../../svg/external-link.svg");
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 14px 14px;
+		transition: all .18s ease-in-out;
+		content: '';
+	}
+}
+
+a.is-external-link.global-link::after,
+a.is-external-link.no-external-link-indicator::after {
+	display: none;
+}
+
+// Make focus a little more engaging
+// @source https://twitter.com/argyleink/status/1387072095159406596
+// @link https://codepen.io/argyleink/pen/JjEzeLp
+@media (prefers-reduced-motion: no-preference) {
+	*:focus,
+	:focus,
+	[data-whatinput="keyboard"] :focus,
+	[data-whatinput="keyboard"] a:focus {
+		outline-offset: 5px;
+		transition: outline-offset .25s ease;
+	}
+}
