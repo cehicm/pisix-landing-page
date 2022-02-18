@@ -1,0 +1,27 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+.services {
+	text-align: center;
+	padding: 20px;
+	margin: 20px 0;
+
+	&__title {
+		margin-top: 0;
+	}
+
+	&__list {
+		display: grid;
+		row-gap: 20px;
+	}
+
+	.service {
+		&__title {
+			margin-bottom: 0;
+		}
+	}
+
+	.button--view-all {
+		margin: 0 auto;
+	}
+}

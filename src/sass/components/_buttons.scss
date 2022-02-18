@@ -7,6 +7,10 @@
 	border-radius: 6px;
 	border: none;
 
+	&:hover {
+		cursor: pointer;
+	}
+
 	&--hero {
 		background-color: colors.$aqua-blue;
 		color: colors.$white;
@@ -17,6 +21,18 @@
 
 		&:active {
 			border: 1px solid colors.$dark-blue;
+		}
+	}
+
+	&--view-all {
+		background: linear-gradient(
+			to left,
+			colors.$white 50%,
+			colors.$aqua-blue 50%
+		);
+
+		&:hover {
+			background: colors.$aqua-blue;
 		}
 	}
 }

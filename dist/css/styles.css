@@ -134,6 +134,18 @@ h5 {
   color: #00788a;
 }
 
+.services__suptitle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 40px;
+  right: 50%;
+  transform: translate(50%, 15%);
+  border-radius: 6px;
+  background-color: #00bfc4;
+}
+
 .service__title {
   font-weight: 600;
   font-size: 30px;
@@ -257,6 +269,9 @@ h5 {
   border-radius: 6px;
   border: none;
 }
+.button:hover {
+  cursor: pointer;
+}
 .button--hero {
   background-color: #00bfc4;
   color: #ffffff;
@@ -266,6 +281,12 @@ h5 {
 }
 .button--hero:active {
   border: 1px solid #00788a;
+}
+.button--view-all {
+  background: linear-gradient(to left, #ffffff 50%, #00bfc4 50%);
+}
+.button--view-all:hover {
+  background: #00bfc4;
 }
 
 img {
@@ -435,6 +456,25 @@ a {
 }
 .main__bubble__title {
   margin: 0;
+}
+
+.services {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+.services__title {
+  margin-top: 0;
+}
+.services__list {
+  display: grid;
+  row-gap: 20px;
+}
+.services .service__title {
+  margin-bottom: 0;
+}
+.services .button--view-all {
+  margin: 0 auto;
 }
 
 /* poppins-300 - latin */
