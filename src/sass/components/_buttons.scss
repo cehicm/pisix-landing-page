@@ -10,10 +10,6 @@
 	align-items: center;
 	justify-content: center;
 
-	&:hover {
-		cursor: pointer;
-	}
-
 	&--hero {
 		background-color: colors.$aqua-blue;
 		color: colors.$white;
@@ -37,5 +33,17 @@
 		&:hover {
 			background: colors.$aqua-blue;
 		}
+	}
+}
+
+.filter__button {
+	background: none;
+	text-align: center;
+	padding: 10px 0;
+	border: none;
+	border-radius: 6px;
+
+	&--active {
+		background-color: colors.$aqua-blue;
 	}
 }

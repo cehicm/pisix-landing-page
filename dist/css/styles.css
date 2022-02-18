@@ -220,10 +220,12 @@ h5 {
   text-align: center;
 }
 
-.tab__list__item {
+.filter__button button {
+  font-family: "Poppins";
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
+  color: #000000;
 }
 
 .customer__name {
@@ -278,9 +280,6 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-.button:hover {
-  cursor: pointer;
-}
 .button--hero {
   background-color: #00bfc4;
   color: #ffffff;
@@ -296,6 +295,17 @@ h5 {
 }
 .button--view-all:hover {
   background: #00bfc4;
+}
+
+.filter__button {
+  background: none;
+  text-align: center;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+}
+.filter__button--active {
+  background-color: #00bfc4;
 }
 
 .customer__image img {
@@ -315,6 +325,10 @@ a {
 
 .wrapper {
   padding: 20px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .nav__menu__icon {
@@ -531,7 +545,7 @@ a {
   width: 46px;
 }
 
-.filter .tab__list {
+.filter__buttons {
   background: #f7ffff;
   box-shadow: 0px 21px 33px -10px rgba(37, 126, 129, 0.16);
   border-radius: 6px;

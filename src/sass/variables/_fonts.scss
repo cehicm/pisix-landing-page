@@ -255,10 +255,12 @@ h5 {
 	}
 }
 
-.tab__list__item {
+.filter__button button {
+	font-family: "Poppins";
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 16px;
+	color: colors.$black;
 }
 
 .customer {

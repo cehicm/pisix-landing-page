@@ -2,7 +2,7 @@
 @import "../variables/breakpoints";
 
 .filter {
-	.tab__list {
+	&__buttons {
 		background: colors.$white-blue;
 		box-shadow: 0px 21px 33px -10px rgb(37 126 129 / 16%);
 		border-radius: 6px;
