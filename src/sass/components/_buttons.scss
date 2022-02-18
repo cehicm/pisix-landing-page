@@ -6,6 +6,9 @@
 	width: 200px;
 	border-radius: 6px;
 	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	&:hover {
 		cursor: pointer;

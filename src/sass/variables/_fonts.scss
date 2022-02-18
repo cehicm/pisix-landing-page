@@ -98,13 +98,17 @@ h5 {
 
 .about {
 	&__text {
+		font-weight: 600;
 		&--light {
 			color: colors.$light-black;
 		}
 	}
 
 	&__watch__text {
-		line-height: 24px;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		line-height: 1.2;
 		color: colors.$dark-blue;
 	}
 }
@@ -182,7 +186,7 @@ h5 {
 	}
 }
 
-.about__text,
+.about__text--light,
 .newsletter__text {
 	font-size: 18px;
 	font-weight: 400;

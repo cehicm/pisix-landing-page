@@ -90,11 +90,17 @@ h5 {
   text-decoration: underline;
 }
 
+.about__text {
+  font-weight: 600;
+}
 .about__text--light {
   color: #083038;
 }
 .about__watch__text {
-  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  line-height: 1.2;
   color: #00788a;
 }
 
@@ -159,7 +165,7 @@ h5 {
   text-align: center;
 }
 
-.about__text,
+.about__text--light,
 .newsletter__text {
   font-size: 18px;
   font-weight: 400;
@@ -268,6 +274,9 @@ h5 {
   width: 200px;
   border-radius: 6px;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .button:hover {
   cursor: pointer;
@@ -302,6 +311,10 @@ ul li {
 
 a {
   text-decoration: none;
+}
+
+.wrapper {
+  padding: 20px;
 }
 
 .nav__menu__icon {
@@ -460,7 +473,6 @@ a {
 
 .services {
   text-align: center;
-  padding: 20px;
   margin: 20px 0;
 }
 .services__title {
@@ -475,6 +487,51 @@ a {
 }
 .services .button--view-all {
   margin: 0 auto;
+}
+
+.about {
+  text-align: center;
+}
+.about__wrapper {
+  background-image: url("/src/images/lightbulb-bg.svg");
+  background-repeat: no-repeat;
+}
+.about__image {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 4px 8px 44px -10px rgba(66, 94, 122, 0.18);
+  background: #ffffff;
+}
+.about__image img {
+  width: auto;
+}
+.about__button {
+  width: 100%;
+  background-color: #083038;
+  color: #00bfc4;
+  gap: 20px;
+}
+.about__content {
+  margin: 90px 0;
+}
+.about__title {
+  margin-top: 0;
+}
+.about__watch {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+}
+.about__watch .play-button {
+  width: 46px;
 }
 
 /* poppins-300 - latin */

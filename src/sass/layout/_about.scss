@@ -1,10 +1,55 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
 .about {
+	text-align: center;
+
+	&__wrapper {
+		background-image: url("/src/images/lightbulb-bg.svg");
+		background-repeat: no-repeat;
+	}
+
 	&__image {
 		display: flex;
 		flex-direction: column;
+		width: 90%;
+		margin: 0 auto;
+		padding: 20px;
+		border-radius: 12px;
+		border: none;
+		box-shadow: 4px 8px 44px -10px rgba(66, 94, 122, 0.18);
+		background: colors.$white;
 
 		img {
 			width: auto;
+		}
+	}
+
+	&__button {
+		width: 100%;
+		background-color: colors.$light-black;
+		color: colors.$aqua-blue;
+		gap: 20px;
+	}
+
+	&__content {
+		margin: 90px 0;
+	}
+
+	&__title {
+		margin-top: 0;
+	}
+
+	&__watch {
+		display: flex;
+		gap: 20px;
+		margin: 0 auto;
+		align-items: center;
+		padding: 20px;
+		width: 50%;
+
+		.play-button {
+			width: 46px;
 		}
 	}
 }
