@@ -298,7 +298,7 @@ h5 {
   background: #00bfc4;
 }
 
-img {
+.customer__image img {
   width: 100px;
 }
 
@@ -507,9 +507,6 @@ a {
   box-shadow: 4px 8px 44px -10px rgba(66, 94, 122, 0.18);
   background: #ffffff;
 }
-.about__image img {
-  width: auto;
-}
 .about__button {
   width: 100%;
   background-color: #083038;
@@ -532,6 +529,25 @@ a {
 }
 .about__watch .play-button {
   width: 46px;
+}
+
+.filter .tab__list {
+  background: #f7ffff;
+  box-shadow: 0px 21px 33px -10px rgba(37, 126, 129, 0.16);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.filter__images {
+  width: 300px;
+  display: grid;
+  row-gap: 15px;
+  margin: 0 auto;
+}
+.filter__images img {
+  width: 100%;
 }
 
 /* poppins-300 - latin */

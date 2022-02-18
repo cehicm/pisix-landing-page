@@ -1,0 +1,25 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+.filter {
+	.tab__list {
+		background: colors.$white-blue;
+		box-shadow: 0px 21px 33px -10px rgb(37 126 129 / 16%);
+		border-radius: 6px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		padding: 20px;
+	}
+
+	&__images {
+		width: 300px;
+		display: grid;
+		row-gap: 15px;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+		}
+	}
+}
