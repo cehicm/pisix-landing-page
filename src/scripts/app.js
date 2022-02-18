@@ -26,7 +26,7 @@
 
 // Filter images
 (function () {
-    const $galleryImgs = $('#gallery img');
+    const $galleryImgs = $('#filter__gallery img');
     const $filterButtons = $('.filter__buttons');
     const taggedImage = {};
 
