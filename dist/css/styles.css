@@ -108,6 +108,17 @@ h5 {
 .main__text {
   line-height: 34px;
 }
+.main__suptitle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 50px;
+  right: 50%;
+  transform: translate(50%, 15%);
+  border-radius: 6px;
+  background-color: #00bfc4;
+}
 
 .service__text,
 .main__bubble__text {
@@ -366,6 +377,64 @@ a {
   display: grid;
   row-gap: 20px;
   justify-content: center;
+}
+
+.main {
+  background-color: #eafbff;
+}
+.main__wrapper {
+  display: grid;
+  text-align: center;
+}
+.main__bg {
+  position: relative;
+}
+.main__bg img {
+  position: absolute;
+  width: 40px;
+}
+.main__bg__circle--blue {
+  left: 20px;
+  top: 600px;
+}
+.main__bg__circle--dark-blue {
+  right: 50px;
+}
+.main__bg__circle--half {
+  left: 0;
+}
+.main__bg__circle--yellow {
+  top: 200px;
+  right: 0;
+}
+.main__image img {
+  width: auto;
+  background: linear-gradient(229.5deg, rgba(245, 249, 250, 0) 21.55%, #a4dfee 96.28%);
+  border-radius: 100px;
+}
+.main__content {
+  margin-top: 50px;
+}
+.main__title {
+  margin-top: 0;
+}
+.main__bubble {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  text-align: left;
+}
+.main__bubble svg {
+  width: 100px;
+  align-self: baseline;
+}
+.main__bubble--fill {
+  background-color: #ffffff;
+  border-radius: 40px;
+  background: linear-gradient(270deg, #ffffff 1.37%, rgba(255, 255, 255, 0) 98.02%);
+}
+.main__bubble__title {
+  margin: 0;
 }
 
 /* poppins-300 - latin */

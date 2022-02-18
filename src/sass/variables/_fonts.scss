@@ -116,8 +116,24 @@ h5 {
 	color: colors.$dark-blue;
 }
 
-.main__text {
-	line-height: 34px;
+.main {
+	&__text {
+		line-height: 34px;
+	}
+
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 50px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+		}
+	}
 }
 
 .service__text,

@@ -1,7 +1,8 @@
 $white: #ffffff;
 $black: #000000;
 $light-black: #083038;
-$blue-green-gradient: linear-gradient(90deg, #00788a 6.67%, #74dcdf 94.66%);
+
+$background-light-blue: #eafbff;
 $aqua-blue: #00bfc4;
 $dark-blue: #00788a;
 $link-green: #43808c;
@@ -9,3 +10,15 @@ $light-yellow: #fff6eb;
 $light-orange: #fff7f5;
 $light-green: #f0fffa;
 $light-blue: #ecf4ff;
+
+$blue-green-gradient: linear-gradient(90deg, #00788a 6.67%, #74dcdf 94.66%);
+$image-gradient: linear-gradient(
+	229.5deg,
+	rgba(245, 249, 250, 0) 21.55%,
+	#a4dfee 96.28%
+);
+$bubble-gradient: linear-gradient(
+	270deg,
+	#ffffff 1.37%,
+	rgba(255, 255, 255, 0) 98.02%
+);

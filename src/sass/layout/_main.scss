@@ -1,0 +1,78 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+.main {
+	background-color: colors.$background-light-blue;
+
+	&__wrapper {
+		display: grid;
+		text-align: center;
+	}
+
+	&__bg {
+		position: relative;
+
+		img {
+			position: absolute;
+			width: 40px;
+		}
+
+		&__circle {
+			&--blue {
+				left: 20px;
+				top: 600px;
+			}
+
+			&--dark-blue {
+				right: 50px;
+			}
+
+			&--half {
+				left: 0;
+			}
+
+			&--yellow {
+				top: 200px;
+				right: 0;
+			}
+		}
+	}
+
+	&__image {
+		img {
+			width: auto;
+			background: colors.$image-gradient;
+			border-radius: 100px;
+		}
+	}
+
+	&__content {
+		margin-top: 50px;
+	}
+
+	&__title {
+		margin-top: 0;
+	}
+
+	&__bubble {
+		display: flex;
+		align-items: center;
+		padding: 20px 0;
+		text-align: left;
+
+		svg {
+			width: 100px;
+			align-self: baseline;
+		}
+
+		&--fill {
+			background-color: colors.$white;
+			border-radius: 40px;
+			background: colors.$bubble-gradient;
+		}
+
+		&__title {
+			margin: 0;
+		}
+	}
+}
