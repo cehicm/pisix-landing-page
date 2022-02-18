@@ -177,7 +177,7 @@ h5 {
   line-height: 34px;
 }
 .achievement__image__title {
-  font-size: 46px;
+  font-size: 55px;
   font-weight: 800;
   line-height: 46px;
   letter-spacing: 0.02em;
@@ -572,6 +572,60 @@ button:hover {
 }
 .filter .button--view-all {
   margin: 0 auto;
+}
+
+.achievement {
+  text-align: center;
+  margin-top: 60px;
+}
+.achievement__numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.achievement .numbers__title {
+  margin: 0;
+}
+.achievement .numbers__box {
+  padding: 20px 0;
+  width: 200px;
+  margin: 0 auto;
+}
+.achievement .numbers__box:hover {
+  filter: saturate(8);
+}
+.achievement .numbers__box--yellow {
+  background-color: #fff6eb;
+}
+.achievement .numbers__box--orange {
+  background-color: #fff7f5;
+}
+.achievement .numbers__box--green {
+  background-color: #f0fffa;
+}
+.achievement .numbers__box--blue {
+  background-color: #ecf4ff;
+}
+.achievement__image {
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+  justify-content: center;
+  padding: 40px;
+  margin: 0 auto;
+  background: url("/src/images/fireworks.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+}
+.achievement__image__title {
+  margin: 0;
+}
+.achievement__image__text {
+  width: 50%;
 }
 
 /* poppins-300 - latin */
