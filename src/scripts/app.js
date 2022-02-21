@@ -79,10 +79,25 @@ import slick from "slick-carousel";
 	$(slickWrapper).slick({
 		infinite: true,
 		speed: 600,
-		slidesToShow: 1,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: false,
 		dots: true,
 		autoplay: true,
+
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	});
 })(jQuery);

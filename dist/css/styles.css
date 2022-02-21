@@ -491,6 +491,9 @@ button:hover {
   padding: 20px;
   text-align: center;
 }
+.header__wrapper {
+  overflow: hidden;
+}
 .header__bg {
   position: relative;
 }
@@ -561,7 +564,7 @@ button:hover {
   right: 0;
 }
 .main__image img {
-  width: auto;
+  width: 100%;
   background: linear-gradient(229.5deg, rgba(245, 249, 250, 0) 21.55%, #a4dfee 96.28%);
   border-radius: 100px;
 }
@@ -711,7 +714,6 @@ button:hover {
   background-color: #ecf4ff;
 }
 .achievement__image {
-  width: 300px;
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -738,6 +740,42 @@ button:hover {
 }
 .team__title {
   margin: 0;
+}
+.team__list {
+  background: linear-gradient(229.5deg, #ffffff 25.09%, #d7f2f9 101.5%);
+  border-radius: 100px;
+}
+.team__member__img {
+  width: 100%;
+  border-radius: 12px;
+}
+.team .slick-track {
+  display: flex;
+  gap: 20px;
+}
+.team .slick-dots {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .team .slick-dots {
+    gap: 10px;
+  }
+}
+.team .slick-dots li button {
+  font-size: 0;
+  width: 25px;
+  height: 5px;
+  border: none;
+  background-color: #ffffff;
+}
+.team .slick-dots li button:hover {
+  background-color: #00bfc4;
+}
+.team .slick-dots li button:active, .team .slick-dots li button:target, .team .slick-dots li button:focus {
+  background-color: #00788a;
 }
 
 /* poppins-300 - latin */

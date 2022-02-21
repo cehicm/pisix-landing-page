@@ -1,8 +1,62 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
 .team {
 	margin: 40px 0;
 	text-align: center;
 
 	&__title {
 		margin: 0;
+	}
+
+	&__list {
+		background: linear-gradient(
+			229.5deg,
+			colors.$white 25.09%,
+			colors.$team-light-blue 101.5%
+		);
+
+		border-radius: 100px;
+	}
+
+	&__member {
+		&__img {
+			width: 100%;
+			border-radius: 12px;
+		}
+	}
+
+	.slick-track {
+		display: flex;
+		gap: 20px;
+	}
+
+	.slick-dots {
+		display: flex;
+		gap: 2px;
+		justify-content: center;
+		padding: 20px 0;
+
+		@include sc-breakpoint(768) {
+			gap: 10px;
+		}
+
+		li button {
+			font-size: 0;
+			width: 25px;
+			height: 5px;
+			border: none;
+			background-color: colors.$white;
+
+			&:hover {
+				background-color: colors.$aqua-blue;
+			}
+
+			&:active,
+			&:target,
+			&:focus {
+				background-color: colors.$dark-blue;
+			}
+		}
 	}
 }
