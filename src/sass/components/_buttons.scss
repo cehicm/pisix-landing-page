@@ -38,7 +38,12 @@
 	&--aqua {
 		background-color: colors.$aqua-blue;
 		color: colors.$white;
-		box-shadow: 0 25px 50px -12px $aqua-button-hover;
+		box-shadow: 0 25px 50px -12px colors.$aqua-button-hover;
+	}
+
+	&--aqua-text {
+		background: none;
+		color: colors.$aqua-blue;
 	}
 }
 

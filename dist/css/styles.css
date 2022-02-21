@@ -312,6 +312,10 @@ h5 {
   color: #ffffff;
   box-shadow: 0 25px 50px -12px #74dcdf99;
 }
+.button--aqua-text {
+  background: none;
+  color: #00bfc4;
+}
 
 .filter__button {
   height: 50px;
@@ -790,6 +794,27 @@ button:hover {
 }
 .partners__list img {
   width: 100%;
+}
+
+.testimonials {
+  margin: 50px 0;
+}
+.testimonials__title {
+  margin-top: 0;
+}
+.testimonials .customer__rating {
+  display: flex;
+}
+.testimonials .customer__image {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .testimonials .customer__image {
+    display: block;
+  }
+}
+.testimonials .button--aqua-text svg {
+  margin-left: 10px;
 }
 
 /* poppins-300 - latin */

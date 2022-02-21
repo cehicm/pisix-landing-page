@@ -1,0 +1,30 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+.testimonials {
+	margin: 50px 0;
+
+	&__title {
+		margin-top: 0;
+	}
+
+	.customer {
+		&__rating {
+			display: flex;
+		}
+
+		&__image {
+			display: none;
+
+			@include sc-breakpoint(1024) {
+				display: block;
+			}
+		}
+	}
+
+	.button--aqua-text {
+		svg {
+			margin-left: 10px;
+		}
+	}
+}
