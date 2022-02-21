@@ -20,6 +20,28 @@
 				display: block;
 			}
 		}
+
+		&.slick-initialized.slick-slider {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+
+			.slick-list.draggable {
+				grid-row: 1;
+				grid-column: 1/-1;
+			}
+
+			.arrow {
+				grid-row: 2;
+
+				&--prev {
+					grid-column: 6;
+				}
+
+				&--next {
+					grid-column: 7;
+				}
+			}
+		}
 	}
 
 	.button--aqua-text {

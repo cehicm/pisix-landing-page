@@ -249,6 +249,7 @@ h5 {
 .customer__role {
   font-weight: 500;
   letter-spacing: 0.0025em;
+  color: #083038;
 }
 .customer__review {
   font-size: 20px;
@@ -812,6 +813,23 @@ button:hover {
   .testimonials .customer__image {
     display: block;
   }
+}
+.testimonials .customer.slick-initialized.slick-slider {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.testimonials .customer.slick-initialized.slick-slider .slick-list.draggable {
+  grid-row: 1;
+  grid-column: 1/-1;
+}
+.testimonials .customer.slick-initialized.slick-slider .arrow {
+  grid-row: 2;
+}
+.testimonials .customer.slick-initialized.slick-slider .arrow--prev {
+  grid-column: 6;
+}
+.testimonials .customer.slick-initialized.slick-slider .arrow--next {
+  grid-column: 7;
 }
 .testimonials .button--aqua-text svg {
   margin-left: 10px;
