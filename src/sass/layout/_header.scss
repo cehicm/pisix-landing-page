@@ -2,6 +2,10 @@
 @import "../variables/breakpoints";
 
 .header {
+	&__wrapper {
+		overflow: hidden;
+	}
+
 	&__bg {
 		position: relative;
 
