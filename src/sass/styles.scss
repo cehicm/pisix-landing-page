@@ -11,6 +11,7 @@
 
 //Helpers
 @use "helpers/animations";
+@use "helpers/slick";
 
 //Layout
 @use "layout/general";
@@ -21,6 +22,7 @@
 @use "layout/about";
 @use "layout/filter";
 @use "layout/achievement";
+@use "layout/team";
 @use "layout/footer";
 @use "layout/typography";
 
@@ -28,3 +30,8 @@
 @use "pages/homepage";
 
 //Features
+// @import "~slick-carousel/slick/slick";
+// @import "~slick-carousel/slick/slick-theme";
+
+// @import "/node_modules/slick-carousel/slick/slick-theme.scss";
+// @import "/node_modules/slick-carousel/slick/slick.scss";
