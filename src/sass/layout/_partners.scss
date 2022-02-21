@@ -1,0 +1,13 @@
+.partners {
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__list {
+		img {
+			width: 100%;
+		}
+	}
+}
