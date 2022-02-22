@@ -66,7 +66,7 @@ h5 {
   position: absolute;
   display: block;
   height: 3px;
-  width: 80px;
+  width: 70px;
   right: 50%;
   transform: translate(50%, 15%);
   border-radius: 6px;
@@ -84,6 +84,7 @@ h5 {
   .hero__title {
     font-size: 100px;
     line-height: 100px;
+    margin-top: 0;
   }
 }
 .hero__link {
@@ -551,6 +552,7 @@ button:hover {
   .nav__search {
     margin-top: 0;
     flex-direction: row;
+    justify-content: end;
   }
 }
 .nav__search__input {
@@ -579,6 +581,7 @@ button:hover {
 }
 .header__bg {
   position: relative;
+  max-width: 1100px;
 }
 .header__bg img {
   position: absolute;
@@ -591,26 +594,71 @@ button:hover {
   top: 200px;
   transform: translate(300%, 100%);
 }
+@media (min-width: 1024px) {
+  .header__bg .quarter--blue {
+    top: 600px;
+    right: 220px;
+  }
+}
 .header__bg .quarter--yellow {
   top: 100px;
   transform: translate(-700%, 100%);
+}
+@media (min-width: 1024px) {
+  .header__bg .quarter--yellow {
+    top: 120px;
+    right: 150px;
+    transform: none;
+  }
 }
 .header__bg .quarter--orange {
   transform: translate(600%, 100%);
   top: 80px;
 }
+@media (min-width: 1024px) {
+  .header__bg .quarter--orange {
+    top: 400px;
+    left: 50px;
+  }
+}
 .header__bg .circle--pi {
   transform: translate(150%, 100%);
   width: 50px;
 }
+@media (min-width: 1024px) {
+  .header__bg .circle--pi {
+    top: 550px;
+    transform: translate(50%, 0%);
+    width: 30px;
+    left: 200px;
+  }
+}
 .header__bg .line--skewed {
   transform: translate(-180%, 40%);
+}
+@media (min-width: 1024px) {
+  .header__bg .line--skewed {
+    transform: translate(90%, 70%);
+    left: 0;
+  }
 }
 .header__bg .line--squigle {
   transform: translate(80%, 40%);
 }
+@media (min-width: 1024px) {
+  .header__bg .line--squigle {
+    transform: translate(-40%, 240%);
+    bottom: 0;
+    right: 0;
+  }
+}
 .header .hero {
-  padding: 20px;
+  margin: 20px;
+}
+@media (min-width: 1024px) {
+  .header .hero {
+    margin: 50px;
+  }
 }
 .header .hero__buttons {
   display: grid;

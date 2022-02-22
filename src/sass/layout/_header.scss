@@ -8,6 +8,7 @@
 
 	&__bg {
 		position: relative;
+		max-width: 1100px;
 
 		img {
 			position: absolute;
@@ -21,32 +22,65 @@
 			&--blue {
 				top: 200px;
 				transform: translate(300%, 100%);
+
+				@include sc-breakpoint(1024) {
+					top: 600px;
+					right: 220px;
+				}
 			}
 
 			&--yellow {
 				top: 100px;
 				transform: translate(-700%, 100%);
+
+				@include sc-breakpoint(1024) {
+					top: 120px;
+					right: 150px;
+					transform: none;
+				}
 			}
 
 			&--orange {
 				transform: translate(600%, 100%);
-
 				top: 80px;
+
+				@include sc-breakpoint(1024) {
+					top: 400px;
+					left: 50px;
+				}
 			}
 		}
 
 		.circle--pi {
 			transform: translate(150%, 100%);
 			width: 50px;
+
+			@include sc-breakpoint(1024) {
+				top: 550px;
+				transform: translate(50%, 0%);
+				width: 30px;
+				left: 200px;
+			}
 		}
 
 		.line {
 			&--skewed {
 				transform: translate(-180%, 40%);
+
+				@include sc-breakpoint(1024) {
+					transform: translate(90%, 70%);
+					left: 0;
+				}
 			}
 
 			&--squigle {
 				transform: translate(80%, 40%);
+
+				@include sc-breakpoint(1024) {
+					transform: translate(-40%, 240%);
+					bottom: 0;
+					right: 0;
+				}
 			}
 		}
 	}
@@ -55,7 +89,11 @@
 	text-align: center;
 
 	.hero {
-		padding: 20px;
+		margin: 20px;
+
+		@include sc-breakpoint(1024) {
+			margin: 50px;
+		}
 
 		&__buttons {
 			display: grid;

@@ -81,6 +81,7 @@
 		@include sc-breakpoint(1024) {
 			margin-top: 0;
 			flex-direction: row;
+			justify-content: end;
 		}
 
 		&__input {
