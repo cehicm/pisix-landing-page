@@ -1,0 +1,35 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+.newsletter {
+	background-color: colors.$dark-blue;
+	text-align: center;
+	padding: 50px 10px;
+
+	&__title {
+		margin-top: 0;
+	}
+
+	&__subscribe {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		margin-top: 10%;
+
+		input#newsletter-subscribe {
+			height: 70px;
+			width: 90%;
+			border: 1px solid colors.$opaque-layer;
+			border-radius: 12px;
+			background: colors.$opaque-layer;
+			caret-color: colors.$white;
+
+			&::placeholder {
+				color: colors.$white;
+				opacity: 0.5;
+				padding: 0 20px;
+			}
+		}
+	}
+}

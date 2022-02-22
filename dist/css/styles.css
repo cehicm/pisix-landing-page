@@ -853,6 +853,35 @@ button:hover {
   margin-left: 10px;
 }
 
+.newsletter {
+  background-color: #00788a;
+  text-align: center;
+  padding: 50px 10px;
+}
+.newsletter__title {
+  margin-top: 0;
+}
+.newsletter__subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10%;
+}
+.newsletter__subscribe input#newsletter-subscribe {
+  height: 70px;
+  width: 90%;
+  border: 1px solid rgba(244, 246, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(244, 246, 255, 0.1);
+  caret-color: #ffffff;
+}
+.newsletter__subscribe input#newsletter-subscribe::placeholder {
+  color: #ffffff;
+  opacity: 0.5;
+  padding: 0 20px;
+}
+
 /* poppins-300 - latin */
 @font-face {
   font-family: "Poppins";
