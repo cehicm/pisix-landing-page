@@ -1,17 +1,14 @@
 @use '../variables/colors' as colors;
 @import "../variables/breakpoints";
 
-.nav__menu__icon {
-	justify-self: end;
-	path {
-		fill: colors.$dark-blue;
-	}
-}
-
 .nav {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
+
+	@include sc-breakpoint(1024) {
+		grid-template-columns: repeat(3, 1fr);
+	}
 
 	&__menu {
 		display: none;
@@ -21,7 +18,26 @@
 		padding: 20px 0;
 
 		@include sc-breakpoint(1024) {
-			display: block;
+			display: grid;
+			grid-auto-flow: column;
+			grid-column: 2/-1;
+			background: none;
+		}
+
+		&__icon {
+			justify-self: end;
+			path {
+				fill: colors.$dark-blue;
+			}
+			@include sc-breakpoint(1024) {
+				display: none;
+			}
+		}
+
+		&__line {
+			height: 5px;
+			width: 100%;
+			background: colors.$aqua-blue;
 		}
 	}
 
@@ -30,6 +46,11 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 15px;
+
+		@include sc-breakpoint(1024) {
+			flex-direction: row;
+			gap: 20px;
+		}
 	}
 
 	&__search {
@@ -39,6 +60,11 @@
 		align-items: center;
 		gap: 20px;
 		margin-top: 40px;
+
+		@include sc-breakpoint(1024) {
+			margin-top: 0;
+			flex-direction: row;
+		}
 
 		&__input {
 			display: none;

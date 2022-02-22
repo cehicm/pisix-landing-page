@@ -55,6 +55,11 @@ h5 {
   letter-spacing: 0.004em;
   color: #083038;
 }
+@media (min-width: 1024px) {
+  .nav__item a {
+    font-weight: 600;
+  }
+}
 
 .hero__suptitle::after {
   content: "";
@@ -467,17 +472,15 @@ button:hover {
   cursor: pointer;
 }
 
-.nav__menu__icon {
-  justify-self: end;
-}
-.nav__menu__icon path {
-  fill: #00788a;
-}
-
 .nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .nav__menu {
   display: none;
@@ -488,14 +491,39 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .nav__menu {
-    display: block;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column: 2/-1;
+    background: none;
   }
+}
+.nav__menu__icon {
+  justify-self: end;
+}
+.nav__menu__icon path {
+  fill: #00788a;
+}
+@media (min-width: 1024px) {
+  .nav__menu__icon {
+    display: none;
+  }
+}
+.nav__menu__line {
+  height: 5px;
+  width: 100%;
+  background: #00bfc4;
 }
 .nav__list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
+}
+@media (min-width: 1024px) {
+  .nav__list {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 .nav__search {
   position: relative;
@@ -504,6 +532,12 @@ button:hover {
   align-items: center;
   gap: 20px;
   margin-top: 40px;
+}
+@media (min-width: 1024px) {
+  .nav__search {
+    margin-top: 0;
+    flex-direction: row;
+  }
 }
 .nav__search__input {
   display: none;
