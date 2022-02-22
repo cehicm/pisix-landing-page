@@ -23,4 +23,8 @@
 	.button--view-all {
 		margin: 0 auto;
 	}
+
+	&__image:hover {
+		filter: drop-shadow(2px 4px 6px colors.$dark-blue);
+	}
 }

@@ -638,6 +638,9 @@ button:hover {
 .services .button--view-all {
   margin: 0 auto;
 }
+.services__image:hover {
+  filter: drop-shadow(2px 4px 6px #00788a);
+}
 
 .about {
   text-align: center;
