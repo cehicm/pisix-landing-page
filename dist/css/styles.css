@@ -763,6 +763,9 @@ button:hover {
   display: flex;
   gap: 20px;
 }
+.team .slick-dots li.slick-active button:before {
+  background-color: #00788a;
+}
 .team .slick-dots {
   display: flex;
   gap: 2px;
@@ -784,7 +787,7 @@ button:hover {
 .team .slick-dots li button:hover {
   background-color: #00bfc4;
 }
-.team .slick-dots li button:active, .team .slick-dots li button:target, .team .slick-dots li button:focus {
+.team .slick-dots li.slick-active button {
   background-color: #00788a;
 }
 
@@ -806,6 +809,11 @@ button:hover {
 .testimonials .customer__rating {
   display: flex;
 }
+@media (min-width: 768px) {
+  .testimonials .customer__review {
+    padding-right: 150px;
+  }
+}
 .testimonials .customer__image {
   display: none;
 }
@@ -817,6 +825,8 @@ button:hover {
 .testimonials .customer.slick-initialized.slick-slider {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  row-gap: 20px;
 }
 .testimonials .customer.slick-initialized.slick-slider .slick-list.draggable {
   grid-row: 1;
@@ -825,11 +835,19 @@ button:hover {
 .testimonials .customer.slick-initialized.slick-slider .arrow {
   grid-row: 2;
 }
+.testimonials .customer.slick-initialized.slick-slider .arrow:hover {
+  cursor: pointer;
+  stroke: #00788a;
+}
+.testimonials .customer.slick-initialized.slick-slider .arrow path {
+  stroke: #00bfc4;
+  opacity: 1;
+}
 .testimonials .customer.slick-initialized.slick-slider .arrow--prev {
-  grid-column: 6;
+  grid-column: 5;
 }
 .testimonials .customer.slick-initialized.slick-slider .arrow--next {
-  grid-column: 7;
+  grid-column: 8;
 }
 .testimonials .button--aqua-text svg {
   margin-left: 10px;

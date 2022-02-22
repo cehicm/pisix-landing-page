@@ -112,15 +112,15 @@ import slick from "slick-carousel";
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
-		prevArrow: `<svg class="arrow arrow--prev" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+		nextArrow: `<svg class="arrow arrow--next" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path opacity="0.4" d="M15.7501 7.27417L0.750099 7.27417" stroke="#00BFC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 		<path opacity="0.4" d="M9.6998 13.2988C9.6998 13.2988 15.7498 10.0378 15.7498 7.27576C15.7498 4.51176 9.6998 1.24976 9.6998 1.24976" stroke="#00BFC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>`,
-		nextArrow: `<svg class="arrow arrow--next" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		prevArrow: `<svg class="arrow arrow--prev" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M4.2499 12.2742L19.2499 12.2742" stroke="#00BFC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M10.3002 18.2988C10.3002 18.2988 4.2502 15.0378 4.2502 12.2758C4.2502 9.51176 10.3002 6.24976 10.3002 6.24976" stroke="#00BFC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>`,
 		dots: false,
-		autoplay: false,
+		autoplay: true,
 	});
 })(jQuery);

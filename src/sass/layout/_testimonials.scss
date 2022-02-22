@@ -13,6 +13,12 @@
 			display: flex;
 		}
 
+		&__review {
+			@include sc-breakpoint(768) {
+				padding-right: 150px;
+			}
+		}
+
 		&__image {
 			display: none;
 
@@ -24,6 +30,8 @@
 		&.slick-initialized.slick-slider {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
+			align-items: center;
+			row-gap: 20px;
 
 			.slick-list.draggable {
 				grid-row: 1;
@@ -33,12 +41,22 @@
 			.arrow {
 				grid-row: 2;
 
+				&:hover {
+					cursor: pointer;
+					stroke: colors.$dark-blue;
+				}
+
+				path {
+					stroke: colors.$aqua-blue;
+					opacity: 1;
+				}
+
 				&--prev {
-					grid-column: 6;
+					grid-column: 5;
 				}
 
 				&--next {
-					grid-column: 7;
+					grid-column: 8;
 				}
 			}
 		}
