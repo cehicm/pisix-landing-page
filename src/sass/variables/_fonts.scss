@@ -126,6 +126,11 @@ h5 {
 }
 
 .main {
+	&__content {
+		@include sc-breakpoint(1024) {
+			text-align: left;
+		}
+	}
 	&__text {
 		line-height: 34px;
 	}
@@ -141,6 +146,11 @@ h5 {
 			transform: translate(50%, 15%);
 			border-radius: 6px;
 			background-color: colors.$aqua-blue;
+
+			@include sc-breakpoint(1024) {
+				right: auto;
+				transform: translate(0%, 0%);
+			}
 		}
 	}
 }
