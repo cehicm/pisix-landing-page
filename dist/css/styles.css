@@ -323,6 +323,10 @@ h5 {
   color: #ffffff;
   box-shadow: 0 25px 50px -12px #74dcdf99;
 }
+.button--aqua:hover {
+  background-color: #74dcdf99;
+  color: #00788a;
+}
 .button--aqua-text {
   background: none;
   color: #00bfc4;
@@ -338,6 +342,10 @@ h5 {
 }
 .filter__button--active {
   background-color: #00bfc4;
+}
+.filter__button:hover {
+  text-decoration: underline;
+  text-underline-offset: 10px;
 }
 
 .customer__image img {

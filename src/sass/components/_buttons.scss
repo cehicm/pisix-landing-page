@@ -47,6 +47,11 @@
 		background-color: colors.$aqua-blue;
 		color: colors.$white;
 		box-shadow: 0 25px 50px -12px colors.$aqua-button-hover;
+
+		&:hover {
+			background-color: colors.$aqua-button-hover;
+			color: colors.$dark-blue;
+		}
 	}
 
 	&--aqua-text {
@@ -65,5 +70,10 @@
 
 	&--active {
 		background-color: colors.$aqua-blue;
+	}
+
+	&:hover {
+		text-decoration: underline;
+		text-underline-offset: 10px;
 	}
 }
