@@ -9,6 +9,7 @@
 	&__bg {
 		position: relative;
 		max-width: 1100px;
+		margin: auto;
 
 		img {
 			position: absolute;
@@ -93,6 +94,13 @@
 
 		@include sc-breakpoint(1024) {
 			margin: 50px;
+		}
+
+		&__title {
+			@include sc-breakpoint(1024) {
+				max-width: 890px;
+				margin: 0 auto;
+			}
 		}
 
 		&__buttons {
