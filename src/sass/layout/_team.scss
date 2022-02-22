@@ -31,6 +31,10 @@
 		gap: 20px;
 	}
 
+	.slick-dots li.slick-active button:before {
+		background-color: colors.$dark-blue;
+	}
+
 	.slick-dots {
 		display: flex;
 		gap: 2px;
@@ -51,12 +55,9 @@
 			&:hover {
 				background-color: colors.$aqua-blue;
 			}
-
-			&:active,
-			&:target,
-			&:focus {
-				background-color: colors.$dark-blue;
-			}
+		}
+		li.slick-active button {
+			background-color: colors.$dark-blue;
 		}
 	}
 }
