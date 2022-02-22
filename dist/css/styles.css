@@ -509,8 +509,9 @@ button:hover {
   }
 }
 .nav__menu__line {
-  height: 5px;
+  height: 3px;
   width: 100%;
+  transform: translateY(-25px);
   background: #00bfc4;
 }
 .nav__list {
@@ -524,6 +525,19 @@ button:hover {
     flex-direction: row;
     gap: 20px;
   }
+}
+.nav__item a {
+  position: relative;
+}
+.nav__item a:active::after {
+  z-index: 2;
+  top: 100%;
+  content: url("/src/images/icons/nav-menu-circle.svg");
+  position: absolute;
+  display: block;
+  width: 80px;
+  right: 50%;
+  transform: translate(50%, 50%);
 }
 .nav__search {
   position: relative;

@@ -35,8 +35,9 @@
 		}
 
 		&__line {
-			height: 5px;
+			height: 3px;
 			width: 100%;
+			transform: translateY(-25px);
 			background: colors.$aqua-blue;
 		}
 	}
@@ -50,6 +51,22 @@
 		@include sc-breakpoint(1024) {
 			flex-direction: row;
 			gap: 20px;
+		}
+	}
+
+	&__item a {
+		position: relative;
+		&:active {
+			&::after {
+				z-index: 2;
+				top: 100%;
+				content: url("/src/images/icons/nav-menu-circle.svg");
+				position: absolute;
+				display: block;
+				width: 80px;
+				right: 50%;
+				transform: translate(50%, 50%);
+			}
 		}
 	}
 
