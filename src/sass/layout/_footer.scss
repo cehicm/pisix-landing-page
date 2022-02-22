@@ -1,0 +1,12 @@
+.footer {
+	&__wrapper,
+	&__menu__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__social__list__item svg > path:hover {
+		filter: hue-rotate(45deg);
+	}
+}
