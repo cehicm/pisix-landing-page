@@ -648,9 +648,10 @@
 					We operate our banking services in many countries around the world.
 				</p>
 				<div class="newsletter__subscribe">
-					<input type="email" name="newsletter-subscribe" placeholder="Enter your email."
-						id="newsletter-subscribe" />
-					<button class="button button--white">Get Started</button>
+					<input type="email" autocomplete="on" name="email" placeholder="Enter your email."
+						id="newsletter-subscribe" onfocus="this.value=''" class="input-email" />
+					<button id="subscribe-btn" class="button button--white">Get Started</button>
+					<p class="input-message"></p>
 				</div>
 			</div>
 		</section>

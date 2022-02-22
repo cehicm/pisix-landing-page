@@ -4,7 +4,7 @@
 .newsletter {
 	background-color: colors.$dark-blue;
 	text-align: center;
-	padding: 50px 10px;
+	padding: 50px 15px;
 
 	&__title {
 		margin-top: 0;
@@ -14,12 +14,13 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 10px;
+		gap: 20px;
 		margin-top: 10%;
 
 		input#newsletter-subscribe {
 			height: 70px;
 			width: 90%;
+			text-align: left;
 			border: 1px solid colors.$opaque-layer;
 			border-radius: 12px;
 			background: colors.$opaque-layer;
@@ -28,7 +29,21 @@
 			&::placeholder {
 				color: colors.$white;
 				opacity: 0.5;
-				padding: 0 20px;
+			}
+		}
+
+		input[type="email"] {
+			color: colors.$white;
+			padding: 0 20px;
+		}
+
+		.input-message {
+			&.error {
+				color: colors.$black;
+			}
+
+			&.success {
+				color: colors.$white;
 			}
 		}
 	}

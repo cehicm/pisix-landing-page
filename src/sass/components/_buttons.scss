@@ -35,6 +35,14 @@
 		}
 	}
 
+	&--white {
+		background-color: colors.$white;
+
+		&:hover {
+			background-color: colors.$aqua-blue;
+		}
+	}
+
 	&--aqua {
 		background-color: colors.$aqua-blue;
 		color: colors.$white;
