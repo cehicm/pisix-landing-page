@@ -750,7 +750,7 @@ button:hover {
 @media (min-width: 1024px) {
   .main__bg__circle--yellow {
     top: 100px;
-    transform: translate(1200px, 0px);
+    transform: translate(900px, 0px);
   }
 }
 @media (min-width: 1024px) {
@@ -808,6 +808,11 @@ button:hover {
   text-align: center;
   margin: 20px 0;
 }
+@media (min-width: 1024px) {
+  .services {
+    padding: 40px;
+  }
+}
 .services__title {
   margin-top: 0;
 }
@@ -815,11 +820,29 @@ button:hover {
   display: grid;
   row-gap: 20px;
 }
+@media (min-width: 1024px) {
+  .services__list {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .services__item {
+    padding: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .services__item:hover {
+    box-shadow: 0 25px 50px -12px #c9c9c9;
+  }
+}
 .services .service__title {
   margin-bottom: 0;
 }
 .services .button--view-all {
   margin: 0 auto;
+  margin-top: 40px;
 }
 .services__image:hover {
   filter: drop-shadow(2px 4px 6px #00788a);

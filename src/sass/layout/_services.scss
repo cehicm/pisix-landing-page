@@ -5,6 +5,10 @@
 	text-align: center;
 	margin: 20px 0;
 
+	@include sc-breakpoint(1024) {
+		padding: 40px;
+	}
+
 	&__title {
 		margin-top: 0;
 	}
@@ -12,6 +16,24 @@
 	&__list {
 		display: grid;
 		row-gap: 20px;
+
+		@include sc-breakpoint(1024) {
+			grid-template-columns: repeat(3, 1fr);
+			align-items: center;
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		@include sc-breakpoint(1024) {
+			padding: 50px;
+		}
+
+		&:hover {
+			@include sc-breakpoint(1024) {
+				box-shadow: 0 25px 50px -12px colors.$gray;
+			}
+		}
 	}
 
 	.service {
@@ -22,6 +44,7 @@
 
 	.button--view-all {
 		margin: 0 auto;
+		margin-top: 40px;
 	}
 
 	&__image:hover {
