@@ -2,8 +2,13 @@
 @import "../variables/breakpoints";
 
 .team {
-	margin: 40px 0;
 	text-align: center;
+
+	&__content {
+		@include sc-breakpoint(1024) {
+			padding: 20px 220px;
+		}
+	}
 
 	&__title {
 		margin: 0;
@@ -15,7 +20,6 @@
 			colors.$white 25.09%,
 			colors.$team-light-blue 101.5%
 		);
-
 		border-radius: 100px;
 	}
 

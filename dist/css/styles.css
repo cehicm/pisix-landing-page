@@ -503,7 +503,7 @@ section {
 }
 @media (min-width: 1024px) {
   section {
-    margin: 0 40px;
+    margin: 40px;
   }
 }
 
@@ -1103,8 +1103,12 @@ button:hover {
 }
 
 .team {
-  margin: 40px 0;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .team__content {
+    padding: 20px 220px;
+  }
 }
 .team__title {
   margin: 0;
