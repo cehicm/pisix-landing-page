@@ -36,9 +36,15 @@
 				top: 600px;
 
 				@include sc-breakpoint(1024) {
-					transform: translateY(-300px);
+					transform: translateY(-350px);
 					top: 0;
-					left: 950px;
+					left: 650px;
+				}
+
+				@include sc-breakpoint(1400) {
+					transform: translateY(-345px);
+					top: 0;
+					left: 885px;
 				}
 			}
 
@@ -97,8 +103,13 @@
 		}
 	}
 
-	&__title {
-		margin-top: 0;
+	&__title,
+	&__text {
+		margin: 0;
+	}
+
+	&__text {
+		padding: 30px 10px;
 	}
 
 	&__bubble {

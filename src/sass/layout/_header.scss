@@ -2,8 +2,15 @@
 @import "../variables/breakpoints";
 
 .header {
+	padding: 20px;
+	text-align: center;
+
 	&__wrapper {
 		overflow: hidden;
+	}
+
+	.logo {
+		justify-self: flex-start;
 	}
 
 	&__bg {
@@ -84,9 +91,6 @@
 			}
 		}
 	}
-
-	padding: 20px;
-	text-align: center;
 
 	.hero {
 		margin: 20px;

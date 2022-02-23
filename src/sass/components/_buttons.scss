@@ -84,3 +84,14 @@
 		padding: 10px;
 	}
 }
+
+.about__button {
+	width: 100%;
+	background-color: colors.$light-black;
+	color: colors.$aqua-blue;
+	gap: 20px;
+
+	&:focus {
+		filter: invert(1);
+	}
+}

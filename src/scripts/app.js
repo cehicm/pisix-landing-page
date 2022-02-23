@@ -1,6 +1,7 @@
 import $ from "jquery";
 import slick from "slick-carousel";
 
+//Navigation open search
 (function () {
 	const searchIcon = $(".nav__search__icon");
 	const searchInput = $(".nav__search__input");
@@ -12,7 +13,7 @@ import slick from "slick-carousel";
 	});
 
 	$(searchIcon).on("click", function () {
-		$(searchIcon).slideToggle("slow");
+		$(searchIcon).slideToggle("fast");
 		$(searchInput).slideToggle("slow");
 		$(closeButton).slideToggle("slow");
 	});
@@ -121,7 +122,7 @@ import slick from "slick-carousel";
 		<path d="M10.3002 18.2988C10.3002 18.2988 4.2502 15.0378 4.2502 12.2758C4.2502 9.51176 10.3002 6.24976 10.3002 6.24976" stroke="#00BFC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>`,
 		dots: false,
-		autoplay: false,
+		autoplay: true,
 	});
 })(jQuery);
 

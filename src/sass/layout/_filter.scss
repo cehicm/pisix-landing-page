@@ -2,6 +2,10 @@
 @import "../variables/breakpoints";
 
 .filter {
+	@include sc-breakpoint(1024) {
+		margin-bottom: 150px;
+	}
+
 	&__wrapper {
 		margin: 20px 0;
 
@@ -13,8 +17,6 @@
 	}
 
 	&__buttons {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
 		padding: 20px;
 		background: colors.$white-blue;
@@ -27,6 +29,7 @@
 			width: 60%;
 			margin: 0 auto;
 			padding: 10px;
+			margin-bottom: 80px;
 		}
 	}
 
@@ -38,7 +41,7 @@
 
 		@include sc-breakpoint(1024) {
 			width: auto;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			column-gap: 20px;
 		}
 
@@ -47,6 +50,10 @@
 
 			&:hover {
 				filter: drop-shadow(2px 4px 6px colors.$dark-blue);
+			}
+
+			@include sc-breakpoint(1820) {
+				width: 400px;
 			}
 		}
 	}

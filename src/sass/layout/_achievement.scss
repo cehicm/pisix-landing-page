@@ -11,6 +11,11 @@
 			flex-direction: column;
 			position: relative;
 		}
+
+		@include sc-breakpoint(1400) {
+			max-width: fit-content;
+			margin: 0 auto;
+		}
 	}
 
 	&__numbers {

@@ -2,9 +2,22 @@
 @import "../variables/breakpoints";
 
 .testimonials {
+	margin-top: 60px;
+
 	@include sc-breakpoint(1024) {
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	&__wrapper {
+		@include sc-breakpoint(768) {
+			margin: 0 auto;
+			width: 80%;
+		}
+
+		@include sc-breakpoint(1024) {
+			width: auto;
+		}
 	}
 
 	&__title {
@@ -27,14 +40,14 @@
 
 	.customer {
 		&__info {
+			h3,
+			p {
+				margin: 0;
+			}
+
 			@include sc-breakpoint(1024) {
 				display: flex;
 				align-items: center;
-
-				h3,
-				p {
-					margin: 0;
-				}
 			}
 		}
 
@@ -45,10 +58,9 @@
 		}
 
 		&__emoji {
-			border-radius: 50%;
-			box-shadow: 0 25px 50px -12px colors.$gray;
-
-			@include sc-breakpoint(1024) {
+			img {
+				border-radius: 50%;
+				box-shadow: 0 25px 50px -12px colors.$gray;
 			}
 		}
 
@@ -94,7 +106,11 @@
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
 			align-items: center;
-			row-gap: 20px;
+			row-gap: 10px;
+
+			@include sc-breakpoint(1024) {
+				row-gap: 20px;
+			}
 
 			.slick-list.draggable {
 				grid-row: 1;

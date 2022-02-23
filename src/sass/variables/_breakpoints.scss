@@ -17,6 +17,7 @@ $media-queries: (
 	1280: 1280px,
 	1300: 1300px,
 	1400: 1400px,
+	1500: 1500px,
 	1600: 1600px,
 	1820: 1820px,
 );
@@ -26,9 +27,7 @@ $media-queries: (
 		@media (#{$type}-width: #{map-get($media-queries, $point)}) {
 			@content;
 		}
-	}
-
-	@else {
+	} @else {
 		@error 'There is not value that could be retrieved from "#{$point}". ' + 'Please make sure that "#{$point}" is defined in $media-queries map.';
 	}
 }

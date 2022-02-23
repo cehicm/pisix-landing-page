@@ -4,10 +4,12 @@
 .nav {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	align-items: center;
 
 	@include sc-breakpoint(1024) {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(12, 1fr);
+		align-items: center;
+		width: 80%;
+		margin: 0 auto;
 	}
 
 	&__menu {
@@ -19,26 +21,33 @@
 
 		@include sc-breakpoint(1024) {
 			display: grid;
-			grid-auto-flow: column;
-			grid-column: 2/-1;
+			grid-template-columns: repeat(12, 1fr);
+			grid-column: 3/-1;
 			background: none;
 		}
 
 		&__icon {
 			justify-self: end;
+
 			path {
 				fill: colors.$dark-blue;
 			}
+
 			@include sc-breakpoint(1024) {
 				display: none;
 			}
 		}
 
 		&__line {
-			height: 3px;
-			width: 100%;
-			transform: translateY(-25px);
-			background: colors.$aqua-blue;
+			display: none;
+			@include sc-breakpoint(1024) {
+				display: block;
+				height: 3px;
+				transform: translateY(-25px);
+				background: colors.$aqua-blue;
+				width: 80%;
+				margin: 0 auto;
+			}
 		}
 	}
 
@@ -49,8 +58,10 @@
 		gap: 15px;
 
 		@include sc-breakpoint(1024) {
+			grid-column: 5;
 			flex-direction: row;
-			gap: 20px;
+			justify-content: space-evenly;
+			gap: 25px;
 		}
 	}
 
@@ -81,7 +92,7 @@
 		@include sc-breakpoint(1024) {
 			margin-top: 0;
 			flex-direction: row;
-			justify-content: end;
+			grid-column-end: -1;
 		}
 
 		&__input {

@@ -7,12 +7,22 @@
 	padding: 50px 15px;
 
 	@include sc-breakpoint(1024) {
-		transform: translateY(200px);
+		width: 90%;
+		margin: 0 auto;
+		transform: translateY(40%);
+	}
+
+	@include sc-breakpoint(1400) {
+		width: 80%;
 	}
 
 	&__wrapper {
-		@include sc-breakpoint(1024) {
-			padding: 2% 30%;
+		@include sc-breakpoint(768) {
+			padding: 2% 20%;
+		}
+
+		@include sc-breakpoint(1400) {
+			padding: 2% 25%;
 		}
 	}
 
@@ -59,6 +69,11 @@
 		}
 
 		.input-message {
+			@include sc-breakpoint(1024) {
+				position: absolute;
+				transform: translateY(60px);
+			}
+
 			&.error {
 				color: colors.$black;
 			}

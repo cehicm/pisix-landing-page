@@ -24,6 +24,10 @@
 		}
 	}
 
+	&__menu {
+		overflow: hidden;
+	}
+
 	&__social {
 		@include sc-breakpoint(1024) {
 			display: flex;
