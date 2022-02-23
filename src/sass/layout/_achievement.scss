@@ -5,10 +5,31 @@
 	text-align: center;
 	margin-top: 60px;
 
+	&__wrapper {
+		@include sc-breakpoint(1024) {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+		}
+	}
+
 	&__numbers {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+
+		@include sc-breakpoint(1024) {
+			flex-direction: row;
+			gap: 10px;
+			padding: 30px 0;
+		}
+	}
+
+	&__text {
+		@include sc-breakpoint(1024) {
+			text-align: left;
+			position: absolute;
+		}
 	}
 
 	.numbers {
@@ -25,8 +46,21 @@
 				filter: saturate(8);
 			}
 
+			@include sc-breakpoint(1024) {
+				height: 100px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-self: self-end;
+				padding: 20px 5px;
+			}
+
 			&--yellow {
 				background-color: colors.$light-yellow;
+
+				@include sc-breakpoint(1024) {
+					margin-left: 20px;
+				}
 			}
 
 			&--orange {
@@ -56,6 +90,11 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		border-radius: 6px;
+
+		@include sc-breakpoint(1024) {
+			background-size: 100% 350px;
+			background-position: bottom;
+		}
 
 		&__title {
 			margin: 0;

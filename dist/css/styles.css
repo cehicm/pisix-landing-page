@@ -109,6 +109,26 @@ h5 {
   line-height: 1.2;
   color: #00788a;
 }
+.about__watch__span {
+  display: inline-block;
+}
+.about__suptitle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 50px;
+  right: 50%;
+  transform: translate(50%, 15%);
+  border-radius: 6px;
+  background-color: #00bfc4;
+}
+@media (min-width: 1024px) {
+  .about__suptitle::after {
+    right: auto;
+    transform: translate(0%, 0%);
+  }
+}
 
 .title--blue {
   font-size: 44px;
@@ -992,10 +1012,30 @@ button:hover {
   text-align: center;
   margin-top: 60px;
 }
+@media (min-width: 1024px) {
+  .achievement__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
 .achievement__numbers {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media (min-width: 1024px) {
+  .achievement__numbers {
+    flex-direction: row;
+    gap: 10px;
+    padding: 30px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .achievement__text {
+    text-align: left;
+    position: absolute;
+  }
 }
 .achievement .numbers__title {
   margin: 0;
@@ -1008,8 +1048,23 @@ button:hover {
 .achievement .numbers__box:hover {
   filter: saturate(8);
 }
+@media (min-width: 1024px) {
+  .achievement .numbers__box {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: self-end;
+    padding: 20px 5px;
+  }
+}
 .achievement .numbers__box--yellow {
   background-color: #fff6eb;
+}
+@media (min-width: 1024px) {
+  .achievement .numbers__box--yellow {
+    margin-left: 20px;
+  }
 }
 .achievement .numbers__box--orange {
   background-color: #fff7f5;
@@ -1033,6 +1088,12 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 6px;
+}
+@media (min-width: 1024px) {
+  .achievement__image {
+    background-size: 100% 350px;
+    background-position: bottom;
+  }
 }
 .achievement__image__title {
   margin: 0;
