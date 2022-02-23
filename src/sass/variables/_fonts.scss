@@ -109,12 +109,18 @@ h5 {
 		}
 	}
 
-	&__watch__text {
-		margin: 0;
-		padding: 0;
-		text-align: left;
-		line-height: 1.2;
-		color: colors.$dark-blue;
+	&__watch {
+		&__text {
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			line-height: 1.2;
+			color: colors.$dark-blue;
+		}
+
+		&__span {
+			display: inline-block;
+		}
 	}
 
 	&__suptitle {
