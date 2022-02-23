@@ -71,6 +71,11 @@ function watchTask() {
 	);
 }
 
+function buildTask(cb) {
+	series(cssTask, babelTask, webpackTask);
+	cb();
+}
+
 // Default Gulp Task
 exports.default = series(
 	cssTask,
@@ -79,3 +84,5 @@ exports.default = series(
 	babelTask,
 	webpackTask
 );
+
+exports.build = buildTask;
