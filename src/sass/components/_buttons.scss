@@ -73,10 +73,14 @@
 
 	&--active {
 		background-color: colors.$aqua-blue;
+		color: colors.$white;
 	}
 
 	&:hover {
 		text-decoration: underline;
 		text-underline-offset: 10px;
+	}
+	@include sc-breakpoint(1024) {
+		padding: 10px;
 	}
 }

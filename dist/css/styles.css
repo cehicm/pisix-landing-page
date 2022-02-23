@@ -362,14 +362,16 @@ h5 {
 }
 .filter__button--active {
   background-color: #00bfc4;
+  color: #ffffff;
 }
 .filter__button:hover {
   text-decoration: underline;
   text-underline-offset: 10px;
 }
-
-.customer__image img {
-  width: 100px;
+@media (min-width: 1024px) {
+  .filter__button {
+    padding: 10px;
+  }
 }
 
 /* Slider */
@@ -938,6 +940,13 @@ button:hover {
 .filter__wrapper {
   margin: 20px 0;
 }
+@media (min-width: 1024px) {
+  .filter__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .filter__buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -947,11 +956,27 @@ button:hover {
   box-shadow: 0px 21px 33px -10px rgba(37, 126, 129, 0.16);
   border-radius: 6px;
 }
+@media (min-width: 1024px) {
+  .filter__buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
 .filter__images {
   width: 300px;
   display: grid;
   row-gap: 15px;
   margin: 0 auto 20px auto;
+}
+@media (min-width: 1024px) {
+  .filter__images {
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
 }
 .filter__images img {
   width: 100%;
@@ -1070,6 +1095,10 @@ button:hover {
 }
 .partners__list img {
   width: 100%;
+}
+
+.customer__image img {
+  width: 100px;
 }
 
 .testimonials {
