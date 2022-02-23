@@ -6,8 +6,24 @@
 	text-align: center;
 	padding: 50px 15px;
 
+	@include sc-breakpoint(1024) {
+		transform: translateY(200px);
+	}
+
+	&__wrapper {
+		@include sc-breakpoint(1024) {
+			padding: 2% 30%;
+		}
+	}
+
 	&__title {
 		margin-top: 0;
+	}
+
+	&__text {
+		@include sc-breakpoint(1024) {
+			padding: 0 10%;
+		}
 	}
 
 	&__subscribe {
@@ -16,6 +32,11 @@
 		align-items: center;
 		gap: 20px;
 		margin-top: 10%;
+
+		@include sc-breakpoint(1024) {
+			flex-direction: row;
+			gap: 10px;
+		}
 
 		input#newsletter-subscribe {
 			height: 70px;
