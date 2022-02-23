@@ -477,7 +477,12 @@ a {
 }
 
 section {
-  padding: 20px;
+  margin: 20px;
+}
+@media (min-width: 1024px) {
+  section {
+    margin: 0 40px;
+  }
 }
 
 button:hover {
@@ -850,10 +855,28 @@ button:hover {
 
 .about {
   text-align: center;
-}
-.about__wrapper {
   background-image: url("/src/images/lightbulb-bg.svg");
   background-repeat: no-repeat;
+  background-size: 500px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+@media (min-width: 1024px) {
+  .about h3,
+.about p {
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .about {
+    background-position: bottom left;
+  }
+}
+@media (min-width: 1024px) {
+  .about__wrapper {
+    display: flex;
+    align-items: center;
+  }
 }
 .about__image {
   display: flex;
@@ -866,6 +889,12 @@ button:hover {
   box-shadow: 4px 8px 44px -10px rgba(66, 94, 122, 0.18);
   background: #ffffff;
 }
+@media (min-width: 1024px) {
+  .about__image {
+    width: 40%;
+    margin-left: 40px;
+  }
+}
 .about__button {
   width: 100%;
   background-color: #083038;
@@ -874,6 +903,16 @@ button:hover {
 }
 .about__content {
   margin: 90px 0 50px 0;
+}
+@media (min-width: 1024px) {
+  .about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 48%;
+    text-align: left;
+    padding: 0 40px;
+  }
 }
 .about__title {
   margin-top: 0;
@@ -885,6 +924,12 @@ button:hover {
   align-items: center;
   padding: 20px;
   width: 50%;
+}
+@media (min-width: 1024px) {
+  .about__watch {
+    margin: 0;
+    padding: 0;
+  }
 }
 .about__watch .play-button {
   width: 46px;
