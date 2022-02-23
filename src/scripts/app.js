@@ -121,7 +121,7 @@ import slick from "slick-carousel";
 		<path d="M10.3002 18.2988C10.3002 18.2988 4.2502 15.0378 4.2502 12.2758C4.2502 9.51176 10.3002 6.24976 10.3002 6.24976" stroke="#00BFC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>`,
 		dots: false,
-		autoplay: true,
+		autoplay: false,
 	});
 })(jQuery);
 

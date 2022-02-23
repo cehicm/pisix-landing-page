@@ -1,27 +1,68 @@
 @use '../variables/colors' as colors;
 @import "../variables/breakpoints";
 
-.customer__image {
-	img {
-		width: 100px; //temporary Marija Cehic
-	}
-}
-
 .testimonials {
-	margin: 50px 0;
+	@include sc-breakpoint(1024) {
+		width: 80%;
+		margin: 0 auto;
+	}
 
 	&__title {
 		margin-top: 0;
+		@include sc-breakpoint(1024) {
+			width: 200px;
+		}
+	}
+
+	&__content {
+		@include sc-breakpoint(1024) {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
+
+	&__quote {
+		grid-column: 1/-1;
 	}
 
 	.customer {
+		&__info {
+			@include sc-breakpoint(1024) {
+				display: flex;
+				align-items: center;
+
+				h3,
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		&__profile {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		&__emoji {
+			border-radius: 50%;
+			box-shadow: 0 25px 50px -12px colors.$gray;
+
+			@include sc-breakpoint(1024) {
+			}
+		}
+
 		&__rating {
 			display: flex;
 		}
 
 		&__review {
 			@include sc-breakpoint(768) {
-				padding-right: 150px;
+				width: 80%;
+			}
+
+			@include sc-breakpoint(1400) {
+				width: 60%;
 			}
 		}
 
@@ -30,6 +71,22 @@
 
 			@include sc-breakpoint(1024) {
 				display: block;
+				grid-column: -1;
+				position: relative;
+			}
+
+			&__emoji {
+				position: absolute;
+				width: 150px;
+			}
+
+			&__placeholder {
+				background: linear-gradient(
+					229.5deg,
+					colors.$white 25.09%,
+					colors.$team-light-blue 101.5%
+				);
+				border-radius: 100px;
 			}
 		}
 
@@ -59,10 +116,18 @@
 
 				&--prev {
 					grid-column: 5;
+
+					@include sc-breakpoint(1024) {
+						grid-column: 10;
+					}
 				}
 
 				&--next {
 					grid-column: 8;
+
+					@include sc-breakpoint(1024) {
+						grid-column: 11;
+					}
 				}
 			}
 		}
