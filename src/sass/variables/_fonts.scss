@@ -355,11 +355,24 @@ h5 {
 
 .footer {
 	text-align: center;
+	overflow: hidden;
 
 	&__item__title {
 		font-size: 18px;
 		line-height: 20px;
 		letter-spacing: 0.01em;
+		@include sc-breakpoint(1024) {
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				height: 1px;
+				width: 160px;
+				border-radius: 3px;
+				background-color: colors.$dark-blue;
+				margin-top: 10px;
+			}
+		}
 	}
 
 	&__item a,

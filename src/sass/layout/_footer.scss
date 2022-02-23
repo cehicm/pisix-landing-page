@@ -1,9 +1,52 @@
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
 .footer {
+	background-color: colors.$background-light-blue;
+
 	&__wrapper,
 	&__menu__wrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+
+		@include sc-breakpoint(1024) {
+			padding-top: 12%;
+		}
+	}
+
+	&__wrapper {
+		@include sc-breakpoint(1024) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			text-align: left;
+		}
+	}
+
+	&__social {
+		@include sc-breakpoint(1024) {
+			display: flex;
+			flex-direction: column;
+
+			&__list {
+				display: flex;
+				gap: 20px;
+			}
+
+			&__logo {
+				align-self: flex-start;
+			}
+		}
+	}
+
+	&__menu {
+		@include sc-breakpoint(1024) {
+			&__wrapper {
+				flex-direction: row;
+				gap: 40px;
+			}
+		}
 	}
 
 	&__social__list__item svg > path:hover {

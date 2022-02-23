@@ -308,11 +308,24 @@ h5 {
 
 .footer {
   text-align: center;
+  overflow: hidden;
 }
 .footer__item__title {
   font-size: 18px;
   line-height: 20px;
   letter-spacing: 0.01em;
+}
+@media (min-width: 1024px) {
+  .footer__item__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 160px;
+    border-radius: 3px;
+    background-color: #00788a;
+    margin-top: 10px;
+  }
 }
 .footer__item a, .footer__copyright, .footer__copyright a {
   font-weight: 400;
@@ -1165,6 +1178,7 @@ button:hover {
     box-shadow: 0px 29px 62px -22px rgba(53, 77, 140, 0.1);
     border-radius: 20px;
     margin-bottom: 50px;
+    padding: 0 100px;
   }
 }
 .partners__list img {
@@ -1294,6 +1308,11 @@ button:hover {
   text-align: center;
   padding: 50px 15px;
 }
+@media (min-width: 1024px) {
+  .newsletter {
+    transform: translateY(200px);
+  }
+}
 .newsletter__title {
   margin-top: 0;
 }
@@ -1328,10 +1347,45 @@ button:hover {
   color: #ffffff;
 }
 
+.footer {
+  background-color: #eafbff;
+}
 .footer__wrapper, .footer__menu__wrapper {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+@media (min-width: 1024px) {
+  .footer__wrapper, .footer__menu__wrapper {
+    padding-top: 12%;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__social {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__social__list {
+    display: flex;
+    gap: 20px;
+  }
+  .footer__social__logo {
+    align-self: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__menu__wrapper {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 .footer__social__list__item svg > path:hover {
   filter: hue-rotate(45deg);
