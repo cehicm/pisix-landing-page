@@ -116,6 +116,25 @@ h5 {
 		line-height: 1.2;
 		color: colors.$dark-blue;
 	}
+
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 50px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+
+			@include sc-breakpoint(1024) {
+				right: auto;
+				transform: translate(0%, 0%);
+			}
+		}
+	}
 }
 
 .title--blue {
