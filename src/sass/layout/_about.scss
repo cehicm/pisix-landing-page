@@ -26,6 +26,33 @@
 		}
 	}
 
+	&__bg {
+		display: none;
+
+		@include sc-breakpoint(768) {
+			display: block;
+			position: relative;
+		}
+	}
+
+	&-circle {
+		position: absolute;
+		&--yellow-top {
+			top: 0;
+			left: 60px;
+			transform: translateY(-418px);
+		}
+
+		&--blue {
+			top: 80px;
+			left: 640px;
+		}
+
+		&--yellow-bottom {
+			transform: translate(1183px, 181px);
+		}
+	}
+
 	&__image {
 		display: flex;
 		flex-direction: column;
@@ -51,9 +78,8 @@
 		padding: 20px;
 
 		@include sc-breakpoint(1024) {
+			align-items: baseline;
 			width: 50%;
-			display: flex;
-			flex-direction: column;
 			gap: 20px;
 			text-align: left;
 			padding: 0;
