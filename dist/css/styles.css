@@ -346,6 +346,7 @@ h5 {
 }
 
 .button {
+  padding: 21px 40px;
   border-radius: 6px;
   border: none;
   display: flex;
@@ -353,7 +354,6 @@ h5 {
   justify-content: center;
 }
 .button--hero {
-  padding: 21px 40px;
   background-color: #00bfc4;
   color: #ffffff;
 }
@@ -888,6 +888,12 @@ button:hover {
     transform: translate(900px, 0px);
   }
 }
+@media (min-width: 1300px) {
+  .main__bg__circle--yellow {
+    top: 100px;
+    transform: translate(1030px, 0px);
+  }
+}
 @media (min-width: 768px) {
   .main__image {
     width: 100%;
@@ -942,7 +948,7 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .main__bubble {
-    max-width: 270px;
+    max-width: 300px;
   }
 }
 .main__bubble svg {
@@ -960,19 +966,59 @@ button:hover {
 
 .services {
   text-align: center;
+  margin: 100px 40px;
+}
+.services__bg {
+  position: relative;
+}
+.services__bg .services-circle {
+  display: none;
+}
+@media (min-width: 768px) {
+  .services__bg .services-circle {
+    display: block;
+    position: absolute;
+  }
+}
+.services__bg .services-circle--yellow-top {
+  top: 200px;
+  left: 200px;
+}
+.services__bg .services-circle--blue {
+  left: 60%;
+  top: 620px;
+}
+.services__bg .services-circle--yellow-bottom {
+  top: 640px;
+  right: 50px;
 }
 .services__title {
-  margin-top: 0;
+  margin: 0 auto 115px auto;
+}
+@media (min-width: 1024px) {
+  .services__title {
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  .services__title {
+    width: 40%;
+  }
 }
 .services__list {
   display: grid;
   row-gap: 20px;
 }
+@media (min-width: 768px) {
+  .services__list {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+  }
+}
 @media (min-width: 1024px) {
   .services__list {
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 20px;
   }
 }
 @media (min-width: 1024px) {
@@ -983,6 +1029,7 @@ button:hover {
 @media (min-width: 1024px) {
   .services__item:hover {
     box-shadow: 0 25px 50px -12px #c9c9c9;
+    border-radius: 6px;
   }
 }
 .services .service__title {
