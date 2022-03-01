@@ -11,12 +11,17 @@
 
 	.logo {
 		justify-self: flex-start;
+		grid-row: 1;
 	}
 
 	&__bg {
-		position: relative;
-		max-width: 1100px;
-		margin: auto;
+		display: none;
+
+		@include sc-breakpoint(768) {
+			position: relative;
+			max-width: 1100px;
+			margin: auto;
+		}
 
 		img {
 			position: absolute;
@@ -102,7 +107,7 @@
 		&__title {
 			@include sc-breakpoint(1024) {
 				max-width: 890px;
-				margin: 0 auto;
+				margin: 32px auto 95px auto;
 			}
 		}
 

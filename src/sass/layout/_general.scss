@@ -1,5 +1,13 @@
 @import "../variables/breakpoints";
 
+body {
+	max-width: 1440px;
+
+	@include sc-breakpoint(1820) {
+		margin: 0 auto;
+	}
+}
+
 ul {
 	padding-left: 0;
 

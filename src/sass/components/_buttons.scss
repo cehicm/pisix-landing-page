@@ -2,8 +2,6 @@
 @import "../variables/breakpoints";
 
 .button {
-	height: 70px;
-	width: 200px;
 	border-radius: 6px;
 	border: none;
 	display: flex;
@@ -11,6 +9,7 @@
 	justify-content: center;
 
 	&--hero {
+		padding: 21px 40px;
 		background-color: colors.$aqua-blue;
 		color: colors.$white;
 
