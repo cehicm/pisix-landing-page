@@ -21,16 +21,8 @@ a {
 }
 
 section {
-	margin: 20px 10px;
-
-	@include sc-breakpoint(1024) {
-		margin: 40px;
-	}
-
-	@include sc-breakpoint(1820) {
-		max-width: 80%;
-		margin: 0 auto;
-	}
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 button:hover {
