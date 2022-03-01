@@ -1034,7 +1034,7 @@ button:hover {
   }
 }
 .team__title {
-  margin: 0;
+  margin: 15px 0;
 }
 .team__text {
   max-width: 580px;

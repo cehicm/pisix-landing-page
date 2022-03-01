@@ -6,12 +6,17 @@
 
 	&__content {
 		@include sc-breakpoint(1024) {
-			padding: 20px 220px;
+			padding: 20px 220px 90px 220px;
 		}
 	}
 
 	&__title {
-		margin: 0;
+		margin: 15px 0;
+	}
+
+	&__text {
+		max-width: 580px;
+		margin: 0 auto;
 	}
 
 	&__list {
