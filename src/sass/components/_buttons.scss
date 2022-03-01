@@ -63,8 +63,8 @@
 }
 
 .filter__button {
-	height: 50px;
-	padding: 10px 0;
+	width: fit-content;
+	padding: 22px 20px;
 	background: none;
 	text-align: center;
 	border: none;
@@ -78,9 +78,6 @@
 	&:hover {
 		text-decoration: underline;
 		text-underline-offset: 10px;
-	}
-	@include sc-breakpoint(1024) {
-		padding: 10px;
 	}
 }
 

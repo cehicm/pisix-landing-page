@@ -50,7 +50,7 @@ import slick from "slick-carousel";
 	});
 
 	$("<button/>", {
-		text: "Show All",
+		text: "All",
 		class: "filter__button filter__button--active",
 		click: function () {
 			$(this)

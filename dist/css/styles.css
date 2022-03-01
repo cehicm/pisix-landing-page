@@ -100,8 +100,8 @@ body {
 }
 
 .filter__button {
-  height: 50px;
-  padding: 10px 0;
+  width: fit-content;
+  padding: 22px 20px;
   background: none;
   text-align: center;
   border: none;
@@ -114,11 +114,6 @@ body {
 .filter__button:hover {
   text-decoration: underline;
   text-underline-offset: 10px;
-}
-@media (min-width: 1024px) {
-  .filter__button {
-    padding: 10px;
-  }
 }
 
 .about__button {
@@ -839,43 +834,53 @@ button:hover {
   }
 }
 .filter__wrapper {
-  margin: 20px 0;
+  margin: 20px;
 }
 @media (min-width: 1024px) {
   .filter__wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin: 20px 0;
   }
 }
 .filter__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
-  padding: 20px;
   background: #f7ffff;
   box-shadow: 0px 21px 33px -10px rgba(37, 126, 129, 0.16);
   border-radius: 6px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .filter__buttons {
+    flex-direction: row;
+    width: 580px;
+  }
 }
 @media (min-width: 1024px) {
   .filter__buttons {
-    display: flex;
-    justify-content: space-evenly;
-    width: 60%;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 80px;
+    max-width: 634px;
   }
 }
 .filter__images {
   width: 300px;
   display: grid;
   row-gap: 15px;
-  margin: 0 auto 20px auto;
+  margin: 78px auto 96px auto;
+}
+@media (min-width: 768px) {
+  .filter__images {
+    width: auto;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
 }
 @media (min-width: 1024px) {
   .filter__images {
-    width: auto;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
   }
 }
 .filter__images img {
