@@ -3,7 +3,7 @@
 
 .services {
 	text-align: center;
-	margin: 100px 40px;
+	margin: 100px auto;
 
 	&__bg {
 		position: relative;
@@ -37,11 +37,7 @@
 		margin: 0 auto 115px auto;
 
 		@include sc-breakpoint(1024) {
-			width: 60%;
-		}
-
-		@include sc-breakpoint(1024) {
-			width: 40%;
+			width: 600px;
 		}
 	}
 
@@ -62,7 +58,7 @@
 
 	&__item {
 		@include sc-breakpoint(1024) {
-			padding: 50px;
+			padding: 50px 20px;
 		}
 
 		&:hover {
