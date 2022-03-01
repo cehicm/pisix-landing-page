@@ -1,101 +1,401 @@
-/* poppins-300 - latin */
-@font-face {
+@use '../variables/colors' as colors;
+@import "../variables/breakpoints";
+
+//Base styles
+p,
+li,
+a {
 	font-family: "Poppins";
-	font-style: normal;
-	font-weight: 300;
-	src: url("/dist/fonts/poppins/poppins-v19-latin-300.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/dist/fonts/poppins/poppins-v19-latin-300.eot?#iefix")
-			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/dist/fonts/poppins/poppins-v19-latin-300.woff2")
-			format("woff2"),
-		/* Super Modern Browsers */
-			url("/dist/fonts/poppins/poppins-v19-latin-300.woff") format("woff"),
-		/* Modern Browsers */ url("/dist/fonts/poppins/poppins-v19-latin-300.ttf")
-			format("truetype"),
-		/* Safari, Android, iOS */
-			url("/dist/fonts/poppins/poppins-v19-latin-300.svg#Poppins") format("svg"); /* Legacy iOS */
-}
-/* poppins-regular - latin */
-@font-face {
-	font-family: "Poppins";
-	font-style: normal;
-	font-weight: 400;
-	src: url("/dist/fonts/poppins/poppins-v19-latin-regular.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/dist/fonts/poppins/poppins-v19-latin-regular.eot?#iefix")
-			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/dist/fonts/poppins/poppins-v19-latin-regular.woff2")
-			format("woff2"),
-		/* Super Modern Browsers */
-			url("/dist/fonts/poppins/poppins-v19-latin-regular.woff") format("woff"),
-		/* Modern Browsers */
-			url("/dist/fonts/poppins/poppins-v19-latin-regular.ttf")
-			format("truetype"),
-		/* Safari, Android, iOS */
-			url("/dist/fonts/poppins/poppins-v19-latin-regular.svg#Poppins")
-			format("svg"); /* Legacy iOS */
-}
-/* poppins-700 - latin */
-@font-face {
-	font-family: "Poppins";
-	font-style: normal;
-	font-weight: 700;
-	src: url("/dist/fonts/poppins/poppins-v19-latin-700.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/dist/fonts/poppins/poppins-v19-latin-700.eot?#iefix")
-			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/dist/fonts/poppins/poppins-v19-latin-700.woff2")
-			format("woff2"),
-		/* Super Modern Browsers */
-			url("/dist/fonts/poppins/poppins-v19-latin-700.woff") format("woff"),
-		/* Modern Browsers */ url("/dist/fonts/poppins/poppins-v19-latin-700.ttf")
-			format("truetype"),
-		/* Safari, Android, iOS */
-			url("/dist/fonts/poppins/poppins-v19-latin-700.svg#Poppins") format("svg"); /* Legacy iOS */
 }
 
-/* josefin-sans-600 - latin */
-@font-face {
+h1,
+h2,
+h3,
+h4,
+h5 {
 	font-family: "Josefin Sans";
-	font-style: normal;
-	font-weight: 600;
-	src: url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-600.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-600.eot?#iefix")
-			format("embedded-opentype"),
-		/* IE6-IE8 */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-600.woff2")
-			format("woff2"),
-		/* Super Modern Browsers */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-600.woff")
-			format("woff"),
-		/* Modern Browsers */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-600.ttf")
-			format("truetype"),
-		/* Safari, Android, iOS */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-600.svg#JosefinSans")
-			format("svg"); /* Legacy iOS */
 }
-/* josefin-sans-700 - latin */
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: normal;
-	font-weight: 700;
-	src: url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-700.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-700.eot?#iefix")
-			format("embedded-opentype"),
-		/* IE6-IE8 */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-700.woff2")
-			format("woff2"),
-		/* Super Modern Browsers */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-700.woff")
-			format("woff"),
-		/* Modern Browsers */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-700.ttf")
-			format("truetype"),
-		/* Safari, Android, iOS */
-			url("/dist/fonts/josefin-sans/josefin-sans-v23-latin-700.svg#JosefinSans")
-			format("svg"); /* Legacy iOS */
+
+//Shared styles
+.suptitle--blue,
+.about__watch__text,
+.customer__role,
+.footer__item,
+.footer__copyright {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 600;
+}
+
+.suptitle--blue {
+	color: colors.$aqua-blue;
+}
+
+.main__text,
+.achievement__text,
+.team__text {
+	font-size: 22px;
+}
+
+.button {
+	font-family: "Poppins";
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+
+	@include sc-breakpoint(768) {
+		font-weight: 600;
+		&--white {
+			font-weight: 500;
+		}
+	}
+}
+
+//Section styles
+.nav__item a {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 14px;
+	letter-spacing: 0.004em;
+	color: colors.$light-black;
+
+	@include sc-breakpoint(1024) {
+		font-weight: 600;
+	}
+}
+
+.hero {
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 70px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+		}
+	}
+
+	&__title {
+		font-size: 50px;
+		background: colors.$blue-green-gradient;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+
+		@include sc-breakpoint(1024) {
+			font-size: 100px;
+			line-height: 100px;
+			margin-top: 0;
+		}
+	}
+
+	&__link {
+		font-family: "Josefin Sans";
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0em;
+		color: colors.$link-green;
+		text-decoration: underline;
+	}
+}
+
+.about {
+	&__text {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 34px;
+
+		&--light {
+			color: colors.$light-black;
+			font-weight: 400;
+		}
+	}
+
+	&__watch {
+		&__text {
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			line-height: 1.2;
+			color: colors.$dark-blue;
+		}
+
+		&__span {
+			display: block;
+		}
+	}
+
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 50px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+
+			@include sc-breakpoint(1024) {
+				right: auto;
+				transform: translate(0%, 0%);
+			}
+		}
+	}
+}
+
+.title--blue {
+	font-size: 44px;
+	line-height: 60px;
+	letter-spacing: 0.01em;
+	color: colors.$dark-blue;
+}
+
+.main {
+	&__content {
+		@include sc-breakpoint(1024) {
+			text-align: left;
+		}
+	}
+	&__text {
+		line-height: 34px;
+	}
+
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 50px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+
+			@include sc-breakpoint(768) {
+				transform: translate(140%, 15%);
+			}
+
+			@include sc-breakpoint(1024) {
+				right: auto;
+				transform: translate(0%, 0%);
+			}
+		}
+	}
+}
+
+.service__text,
+.main__bubble__text {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.main__bubble__title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 30px;
+	color: colors.$dark-blue;
+}
+
+.services {
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 40px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+		}
+	}
+}
+
+.service {
+	&__title {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 35px;
+		letter-spacing: 0.02em;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 28px;
+		text-align: center;
+	}
+}
+
+.newsletter__text {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.achievement {
+	&__text {
+		font-weight: 400;
+		line-height: 34px;
+	}
+
+	&__image {
+		&__title {
+			font-size: 55px;
+			font-weight: 800;
+			line-height: 46px;
+			letter-spacing: 0.02em;
+			color: colors.$white;
+		}
+
+		&__text {
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 22px;
+			letter-spacing: 0em;
+			color: colors.$white;
+		}
+	}
+}
+
+.partners {
+	&__title {
+		text-align: center;
+	}
+}
+
+.numbers {
+	&__title {
+		font-family: "Poppins";
+		font-size: 46px;
+		font-weight: 800;
+		line-height: 46px;
+		letter-spacing: 0.02em;
+	}
+
+	&__text {
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 12px;
+		color: colors.$light-black;
+	}
+}
+
+.team {
+	&__suptitle {
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 50px;
+			right: 50%;
+			transform: translate(50%, 15%);
+			border-radius: 6px;
+			background-color: colors.$aqua-blue;
+		}
+	}
+	&__title {
+		text-align: center;
+	}
+
+	&__text {
+		font-weight: 400;
+		line-height: 34px;
+		text-align: center;
+	}
+}
+
+.filter__button button {
+	font-family: "Poppins";
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 16px;
+	color: colors.$black;
+}
+
+.customer {
+	&__name {
+		font-family: "Poppins";
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: 0.0025em;
+	}
+
+	&__role {
+		font-weight: 500;
+		letter-spacing: 0.0025em;
+		color: colors.$light-black;
+	}
+
+	&__review {
+		font-size: 20px;
+		font-style: italic;
+		font-weight: 500;
+		line-height: 34px;
+		letter-spacing: 0.02em;
+	}
+}
+
+.newsletter {
+	&__title {
+		font-size: 44px;
+		line-height: 56px;
+		letter-spacing: 0.01em;
+		color: colors.$white;
+	}
+
+	&__text {
+		color: colors.$white;
+	}
+}
+
+.footer {
+	text-align: center;
+
+	&__item__title {
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 0.01em;
+		position: relative;
+
+		@include sc-breakpoint(1024) {
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				height: 1px;
+				width: 160px;
+				border-radius: 3px;
+				background-color: colors.$dark-blue;
+				margin-top: 10px;
+			}
+		}
+	}
+
+	&__item a,
+	&__copyright,
+	&__copyright a {
+		font-weight: 400;
+		line-height: 40px;
+		letter-spacing: 0.02em;
+		color: colors.$black;
+	}
+
+	&__copyright a:hover {
+		text-decoration: underline;
+	}
 }
