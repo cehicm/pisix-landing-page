@@ -14,16 +14,19 @@
 
 	&__menu {
 		display: none;
-		width: 100%;
-		grid-column: 1/-1;
+		grid-row: 1;
 		background: colors.$light-blue;
 		padding: 20px 0;
 
 		@include sc-breakpoint(1024) {
-			display: grid;
-			grid-template-columns: repeat(12, 1fr);
-			grid-column: 3/-1;
+			display: flex;
+			justify-content: space-between;
 			background: none;
+			grid-column: 3/-1;
+		}
+
+		@include sc-breakpoint(1400) {
+			grid-column: 4/-1;
 		}
 
 		&__icon {
@@ -58,10 +61,14 @@
 		gap: 15px;
 
 		@include sc-breakpoint(1024) {
-			grid-column: 5;
+			grid-column: 1;
 			flex-direction: row;
 			justify-content: space-evenly;
 			gap: 25px;
+		}
+
+		@include sc-breakpoint(1400) {
+			grid-column: 3;
 		}
 	}
 
@@ -112,6 +119,10 @@
 
 		&__and__close {
 			position: relative;
+		}
+
+		&--open {
+			grid-column-end: 12;
 		}
 	}
 }

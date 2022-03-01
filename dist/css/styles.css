@@ -557,17 +557,21 @@ button:hover {
 }
 .nav__menu {
   display: none;
-  width: 100%;
-  grid-column: 1/-1;
+  grid-row: 1;
   background: #ecf4ff;
   padding: 20px 0;
 }
 @media (min-width: 1024px) {
   .nav__menu {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column: 3/-1;
+    display: flex;
+    justify-content: space-between;
     background: none;
+    grid-column: 3/-1;
+  }
+}
+@media (min-width: 1400px) {
+  .nav__menu {
+    grid-column: 4/-1;
   }
 }
 .nav__menu__icon {
@@ -602,10 +606,15 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .nav__list {
-    grid-column: 5;
+    grid-column: 1;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 25px;
+  }
+}
+@media (min-width: 1400px) {
+  .nav__list {
+    grid-column: 3;
   }
 }
 .nav__item a {
@@ -651,6 +660,9 @@ button:hover {
 }
 .nav__search__and__close {
   position: relative;
+}
+.nav__search--open {
+  grid-column-end: 12;
 }
 
 .header {

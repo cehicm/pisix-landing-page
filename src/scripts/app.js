@@ -9,19 +9,23 @@ import slick from "slick-carousel";
 	const menuIcon = $(".nav__menu__icon");
 
 	$(menuIcon).on("click", function () {
-		menuIcon.nextAll().slideToggle("slow");
+		menuIcon.nextAll().slideToggle("fast");
 	});
 
 	$(searchIcon).on("click", function () {
 		$(searchIcon).slideToggle("fast");
-		$(searchInput).slideToggle("slow");
-		$(closeButton).slideToggle("slow");
+		$(searchInput).slideToggle("fast");
+		$(closeButton).slideToggle("fast");
+
+		$(".nav__search").addClass("nav__search--open");
 	});
 
 	$(closeButton).on("click", function () {
-		$(searchIcon).slideToggle("slow");
-		$(searchInput).slideToggle("slow");
-		$(closeButton).slideToggle("slow");
+		$(searchIcon).slideToggle("fast");
+		$(searchInput).slideToggle("fast");
+		$(closeButton).slideToggle("fast");
+
+		$(".nav__search").removeClass("nav__search--open");
 	});
 })(jQuery);
 
