@@ -27,16 +27,17 @@
 	}
 
 	&__bg {
+		position: relative;
+	}
+
+	&-circle {
 		display: none;
 
 		@include sc-breakpoint(768) {
 			display: block;
-			position: relative;
+			position: absolute;
 		}
-	}
 
-	&-circle {
-		position: absolute;
 		&--yellow-top {
 			top: 0;
 			left: 60px;
@@ -49,7 +50,11 @@
 		}
 
 		&--yellow-bottom {
-			transform: translate(961px, 212px);
+			transform: translate(400px, 212px);
+
+			@include sc-breakpoint(1024) {
+				transform: translate(961px, 212px);
+			}
 		}
 	}
 
