@@ -175,6 +175,10 @@ h5 {
 			border-radius: 6px;
 			background-color: colors.$aqua-blue;
 
+			@include sc-breakpoint(768) {
+				transform: translate(140%, 15%);
+			}
+
 			@include sc-breakpoint(1024) {
 				right: auto;
 				transform: translate(0%, 0%);

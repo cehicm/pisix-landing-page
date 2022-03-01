@@ -2,28 +2,37 @@
 @import "../variables/breakpoints";
 
 .main {
-	padding: 0;
+	padding: 10px 15px;
 	background-color: colors.$background-light-blue;
+	margin: auto;
 
 	&__wrapper {
-		display: grid;
-		text-align: center;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		@include sc-breakpoint(768) {
+			flex-direction: row;
+		}
 
 		@include sc-breakpoint(1024) {
-			display: flex;
-			align-items: center;
-			gap: 60px;
 			padding: 10% 0;
+			max-width: 1200px;
+			margin: 0 auto;
 		}
 
 		@include sc-breakpoint(1820) {
-			margin: 0 auto;
 			width: 90%;
 		}
 	}
 
 	&__bg {
-		position: relative;
+		display: none;
+
+		@include sc-breakpoint(1024) {
+			display: block;
+			position: relative;
+		}
 
 		img {
 			position: absolute;
@@ -78,9 +87,10 @@
 	}
 
 	&__image {
-		@include sc-breakpoint(1024) {
-			width: 40%;
+		@include sc-breakpoint(768) {
+			width: 100%;
 		}
+
 		img {
 			width: 100%;
 			background: colors.$image-gradient;
@@ -89,11 +99,25 @@
 	}
 
 	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		text-align: center;
 		margin-top: 50px;
 
+		@include sc-breakpoint(768) {
+			width: 90%;
+			text-align: left;
+		}
+
 		@include sc-breakpoint(1024) {
-			width: 70%;
+			width: 100%;
 			padding: 0 40px;
+			margin-left: 40px;
+		}
+
+		@include sc-breakpoint(1400) {
+			margin-left: 70px;
 		}
 
 		&__wrapper {
