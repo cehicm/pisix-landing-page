@@ -3,12 +3,11 @@
 
 .nav {
 	display: grid;
-	// grid-template-columns: repeat(2, 1fr);
 
 	@include sc-breakpoint(1024) {
 		grid-template-columns: repeat(12, 1fr);
 		align-items: center;
-		width: 80%;
+		width: 92%;
 		margin: 0 auto;
 	}
 
@@ -23,7 +22,7 @@
 			display: flex;
 			justify-content: space-between;
 			background: none;
-			grid-column: 3/-1;
+			grid-column: 4/-1;
 			grid-row: 1;
 		}
 
@@ -51,7 +50,7 @@
 				height: 3px;
 				transform: translateY(-25px);
 				background: colors.$aqua-blue;
-				width: 80%;
+				width: 92%;
 				margin: 0 auto;
 			}
 		}
