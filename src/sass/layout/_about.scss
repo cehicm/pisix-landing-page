@@ -2,22 +2,21 @@
 @import "../variables/breakpoints";
 
 .about {
-	@include sc-breakpoint(1024) {
-		h3,
-		p {
-			margin: 0;
-		}
-	}
-
 	text-align: center;
 	background-image: url("/src/images/lightbulb-bg.svg");
 	background-repeat: no-repeat;
-	background-size: 500px;
+	background-size: 120%;
 	margin-top: 8%;
 	margin-bottom: 8%;
 
 	@include sc-breakpoint(1024) {
 		background-position: bottom left;
+		background-size: 500px;
+
+		h3,
+		p {
+			margin: 0;
+		}
 	}
 
 	&__wrapper {
@@ -32,7 +31,6 @@
 		flex-direction: column;
 		width: 90%;
 		margin: 0 auto;
-		padding: 20px;
 		border-radius: 12px;
 		border: none;
 		box-shadow: 4px 8px 44px -10px rgba(66, 94, 122, 0.18);
@@ -41,19 +39,28 @@
 		@include sc-breakpoint(1024) {
 			width: 40%;
 			margin-left: 40px;
+			margin-right: 160px;
 		}
 	}
 
 	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		margin: 90px 0 50px 0;
+		padding: 20px;
 
 		@include sc-breakpoint(1024) {
+			width: 50%;
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
-			width: 48%;
 			text-align: left;
-			padding: 0 40px;
+			padding: 0;
+		}
+
+		@include sc-breakpoint(1400) {
+			width: 40%;
 		}
 	}
 
@@ -64,14 +71,13 @@
 	&__watch {
 		display: flex;
 		gap: 20px;
-		margin: 40px auto 0 auto;
 		align-items: center;
 		padding: 20px;
-		width: 50%;
 
 		@include sc-breakpoint(1024) {
 			margin: 0;
 			padding: 0;
+			width: 50%;
 		}
 
 		.play-button {
