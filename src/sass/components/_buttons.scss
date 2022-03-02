@@ -39,6 +39,9 @@
 
 	&--white {
 		background-color: colors.$white;
+		width: 177px;
+		padding: 24px 36px;
+		transition: background-color 0.5s ease-out;
 
 		&:hover {
 			background-color: colors.$aqua-blue;

@@ -81,6 +81,9 @@ body {
 }
 .button--white {
   background-color: #ffffff;
+  width: 177px;
+  padding: 24px 36px;
+  transition: background-color 0.5s ease-out;
 }
 .button--white:hover {
   background-color: #00bfc4;
@@ -696,12 +699,14 @@ button:hover {
 .services__list {
   display: grid;
   row-gap: 20px;
+  padding: 0 20px;
 }
 @media (min-width: 768px) {
   .services__list {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 20px;
+    padding: 0;
   }
 }
 @media (min-width: 1024px) {
@@ -1061,10 +1066,10 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .team__bg {
-    width: 894px;
+    width: 716px;
     height: 490px;
     bottom: -28px;
-    right: -73px;
+    right: 6px;
   }
 }
 @media (min-width: 1400px) {
@@ -1329,10 +1334,10 @@ button:hover {
     width: 80%;
   }
 }
-@media (min-width: 768px) {
-  .newsletter__wrapper {
-    padding: 2% 20%;
-  }
+.newsletter__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1400px) {
   .newsletter__wrapper {
@@ -1340,21 +1345,26 @@ button:hover {
   }
 }
 .newsletter__title {
-  margin-top: 0;
+  margin: 0;
+}
+.newsletter__text {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px 10px;
 }
 @media (min-width: 1024px) {
   .newsletter__text {
-    padding: 0 10%;
+    margin: 0;
+    padding: 40px 10% 50px 10%;
   }
 }
 .newsletter__subscribe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  margin-top: 10%;
+  gap: 50px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .newsletter__subscribe {
     flex-direction: row;
     gap: 10px;
@@ -1362,7 +1372,7 @@ button:hover {
 }
 .newsletter__subscribe input#newsletter-subscribe {
   height: 70px;
-  width: 90%;
+  width: 232px;
   text-align: left;
   border: 1px solid rgba(244, 246, 255, 0.1);
   border-radius: 12px;
@@ -1372,6 +1382,11 @@ button:hover {
 .newsletter__subscribe input#newsletter-subscribe::placeholder {
   color: #ffffff;
   opacity: 0.5;
+}
+@media (min-width: 425px) {
+  .newsletter__subscribe input#newsletter-subscribe {
+    width: 332px;
+  }
 }
 .newsletter__subscribe input[type=email] {
   color: #ffffff;
