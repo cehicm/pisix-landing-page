@@ -38,13 +38,20 @@
 		border-radius: 100px;
 
 		@include sc-breakpoint(768) {
-			width: 553px;
-			height: 210px;
+			width: 543px;
+			height: 440px;
 			bottom: -64px;
 			right: -3px;
 		}
 
 		@include sc-breakpoint(1024) {
+			width: 894px;
+			height: 490px;
+			bottom: -28px;
+			right: -73px;
+		}
+
+		@include sc-breakpoint(1400) {
 			width: 969px;
 			height: 528px;
 			bottom: -28px;
