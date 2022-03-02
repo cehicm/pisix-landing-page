@@ -1033,6 +1033,9 @@ button:hover {
     padding: 20px 220px 90px 220px;
   }
 }
+.team__wrapper {
+  position: relative;
+}
 .team__title {
   margin: 15px 0;
 }
@@ -1040,7 +1043,12 @@ button:hover {
   max-width: 580px;
   margin: 0 auto;
 }
-.team__list {
+.team__bg {
+  position: absolute;
+  width: 856px;
+  height: 400px;
+  bottom: -43px;
+  right: 0;
   background: linear-gradient(229.5deg, #ffffff 25.09%, #d7f2f9 101.5%);
   border-radius: 100px;
 }
@@ -1081,7 +1089,7 @@ button:hover {
 }
 
 .partners {
-  margin-bottom: 80px;
+  margin: 222px auto 80px auto;
 }
 .partners__wrapper {
   display: flex;

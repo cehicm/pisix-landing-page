@@ -10,6 +10,10 @@
 		}
 	}
 
+	&__wrapper {
+		position: relative;
+	}
+
 	&__title {
 		margin: 15px 0;
 	}
@@ -19,7 +23,12 @@
 		margin: 0 auto;
 	}
 
-	&__list {
+	&__bg {
+		position: absolute;
+		width: 856px;
+		height: 400px;
+		bottom: -43px;
+		right: 0;
 		background: linear-gradient(
 			229.5deg,
 			colors.$white 25.09%,
