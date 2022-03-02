@@ -7,10 +7,7 @@
 
 	&__wrapper {
 		position: relative;
-
-		@include sc-breakpoint(768) {
-			margin: 100px 20px;
-		}
+		margin: 100px 20px;
 
 		@include sc-breakpoint(1024) {
 			margin: 0 auto 190px auto;
