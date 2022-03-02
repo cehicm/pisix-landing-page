@@ -9,7 +9,7 @@ import slick from "slick-carousel";
 	const menuIcon = $(".nav__menu__icon");
 
 	$(menuIcon).on("click", function () {
-		menuIcon.nextAll().slideToggle("fast");
+		menuIcon.next().slideToggle("fast");
 	});
 
 	$(searchIcon).on("click", function () {
