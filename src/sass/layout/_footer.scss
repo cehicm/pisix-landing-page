@@ -3,12 +3,12 @@
 
 .footer {
 	background-color: colors.$background-light-blue;
+	padding: 40px;
 
 	&__wrapper,
 	&__menu__wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
 
 		@include sc-breakpoint(1024) {
 			padding-top: 12%;
@@ -29,25 +29,50 @@
 	}
 
 	&__social {
-		@include sc-breakpoint(1024) {
-			display: flex;
-			flex-direction: column;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 
-			&__list {
-				display: flex;
-				gap: 20px;
+		@include sc-breakpoint(1024) {
+			text-align: center;
+			flex-direction: column;
+			align-items: baseline;
+		}
+
+		&__list {
+			display: flex;
+			gap: 20px;
+
+			@include sc-breakpoint(1024) {
+				margin-top: 58px;
 			}
 
-			&__logo {
-				align-self: flex-start;
+			&__item > a > svg {
+				width: 35px;
+
+				@include sc-breakpoint(768) {
+					width: 48px;
+				}
 			}
 		}
 	}
 
 	&__menu {
-		@include sc-breakpoint(1024) {
-			&__wrapper {
-				flex-direction: row;
+		&__wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 20px;
+			text-align: left;
+
+			@include sc-breakpoint(425) {
+				justify-content: flex-start;
+			}
+
+			@include sc-breakpoint(768) {
+				justify-content: space-evenly;
 				gap: 40px;
 			}
 		}

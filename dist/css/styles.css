@@ -1407,11 +1407,11 @@ button:hover {
 
 .footer {
   background-color: #eafbff;
+  padding: 40px;
 }
 .footer__wrapper, .footer__menu__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 @media (min-width: 1024px) {
   .footer__wrapper, .footer__menu__wrapper {
@@ -1429,22 +1429,52 @@ button:hover {
 .footer__menu {
   overflow: hidden;
 }
-@media (min-width: 1024px) {
-  .footer__social {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__social__list {
-    display: flex;
-    gap: 20px;
-  }
-  .footer__social__logo {
-    align-self: flex-start;
-  }
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 @media (min-width: 1024px) {
+  .footer__social {
+    text-align: center;
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+.footer__social__list {
+  display: flex;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .footer__social__list {
+    margin-top: 58px;
+  }
+}
+.footer__social__list__item > a > svg {
+  width: 35px;
+}
+@media (min-width: 768px) {
+  .footer__social__list__item > a > svg {
+    width: 48px;
+  }
+}
+.footer__menu__wrapper {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+@media (min-width: 425px) {
   .footer__menu__wrapper {
-    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .footer__menu__wrapper {
+    justify-content: space-evenly;
     gap: 40px;
   }
 }
