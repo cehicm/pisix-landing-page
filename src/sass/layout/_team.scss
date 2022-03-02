@@ -5,8 +5,10 @@
 	text-align: center;
 
 	&__content {
+		margin: 100px 20px;
+
 		@include sc-breakpoint(1024) {
-			padding: 20px 220px 90px 220px;
+			margin: auto 220px 90px 220px;
 		}
 	}
 
@@ -25,16 +27,29 @@
 
 	&__bg {
 		position: absolute;
-		width: 856px;
-		height: 400px;
-		bottom: -43px;
-		right: 0;
+		width: 100%;
+		height: 100px;
+		bottom: 0;
 		background: linear-gradient(
 			229.5deg,
 			colors.$white 25.09%,
 			colors.$team-light-blue 101.5%
 		);
 		border-radius: 100px;
+
+		@include sc-breakpoint(768) {
+			width: 553px;
+			height: 210px;
+			bottom: -64px;
+			right: -3px;
+		}
+
+		@include sc-breakpoint(1024) {
+			width: 969px;
+			height: 528px;
+			bottom: -28px;
+			right: -147px;
+		}
 	}
 
 	&__member {
