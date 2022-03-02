@@ -44,11 +44,13 @@
 	&__list {
 		display: grid;
 		row-gap: 20px;
+		padding: 0 20px;
 
 		@include sc-breakpoint(768) {
 			grid-template-columns: repeat(2, 1fr);
 			align-items: center;
 			gap: 20px;
+			padding: 0;
 		}
 
 		@include sc-breakpoint(1024) {
