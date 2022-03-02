@@ -244,8 +244,13 @@ header {
 
 section,
 .main__wrapper {
-  padding: 0 4%;
   margin: 0 auto;
+}
+@media (min-width: 375px) {
+  section,
+.main__wrapper {
+    padding: 0 4%;
+  }
 }
 @media (min-width: 1024px) {
   section,

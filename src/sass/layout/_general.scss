@@ -22,8 +22,11 @@ header {
 
 section,
 .main__wrapper {
-	padding: 0 4%;
 	margin: 0 auto;
+
+	@include sc-breakpoint(375) {
+		padding: 0 4%;
+	}
 
 	@include sc-breakpoint(1024) {
 		padding: 0 8%;
