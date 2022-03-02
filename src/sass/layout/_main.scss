@@ -5,6 +5,7 @@
 	padding: 10px 15px;
 	background-color: colors.$background-light-blue;
 	margin: auto;
+	max-width: none;
 
 	&__wrapper {
 		display: flex;
@@ -22,7 +23,7 @@
 		}
 
 		@include sc-breakpoint(1820) {
-			width: 90%;
+			max-width: 1400px;
 		}
 	}
 

@@ -3,6 +3,10 @@
 .partners {
 	margin: 222px auto 80px auto;
 
+	@include sc-breakpoint(1024) {
+		margin: 222px auto 191px auto;
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
@@ -23,6 +27,7 @@
 
 		@include sc-breakpoint(768) {
 			gap: 20px;
+			flex-wrap: nowrap;
 		}
 
 		@include sc-breakpoint(1024) {
@@ -32,7 +37,7 @@
 			margin-bottom: 50px;
 			width: 100%;
 			align-items: center;
-			margin: 125px auto 51px auto;
+			margin: 82px auto 51px auto;
 		}
 
 		img {

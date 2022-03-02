@@ -63,6 +63,7 @@ body {
 .button--hero {
   background-color: #00bfc4;
   color: #ffffff;
+  transition: filter 0.2s;
 }
 .button--hero:hover {
   filter: drop-shadow(2px 7px 6px #00bfc4);
@@ -81,7 +82,6 @@ body {
 }
 .button--white {
   background-color: #ffffff;
-  width: 177px;
   padding: 24px 36px;
   transition: background-color 0.5s ease-out;
 }
@@ -223,15 +223,6 @@ body {
   display: none;
 }
 
-body {
-  max-width: 1440px;
-}
-@media (min-width: 1820px) {
-  body {
-    margin: 0 auto;
-  }
-}
-
 ul {
   padding-left: 0;
 }
@@ -243,9 +234,24 @@ a {
   text-decoration: none;
 }
 
-section {
-  max-width: 1200px;
+@media (min-width: 1820px) {
+  section,
+header {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+section,
+.main__wrapper {
+  padding: 0 4%;
   margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  section,
+.main__wrapper {
+    padding: 0 8%;
+  }
 }
 
 button:hover {
@@ -419,7 +425,7 @@ button:hover {
   top: 200px;
   transform: translate(300%, 100%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__bg .quarter--blue {
     top: 600px;
     right: 220px;
@@ -429,7 +435,7 @@ button:hover {
   top: 100px;
   transform: translate(-700%, 100%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__bg .quarter--yellow {
     top: 120px;
     right: 150px;
@@ -440,7 +446,7 @@ button:hover {
   transform: translate(600%, 100%);
   top: 80px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__bg .quarter--orange {
     top: 400px;
     left: 50px;
@@ -450,7 +456,7 @@ button:hover {
   transform: translate(150%, 100%);
   width: 50px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__bg .circle--pi {
     top: 550px;
     transform: translate(50%, 0%);
@@ -461,7 +467,7 @@ button:hover {
 .header__bg .line--skewed {
   transform: translate(-180%, 40%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__bg .line--skewed {
     transform: translate(90%, 70%);
     left: 0;
@@ -470,7 +476,7 @@ button:hover {
 .header__bg .line--squigle {
   transform: translate(80%, 40%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__bg .line--squigle {
     transform: translate(-40%, 240%);
     bottom: 0;
@@ -480,12 +486,20 @@ button:hover {
 .header .hero {
   margin: 20px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header .hero {
     margin: 50px;
   }
 }
-@media (min-width: 1024px) {
+.header .hero__suptitle {
+  margin-top: 74px;
+}
+@media (min-width: 768px) {
+  .header .hero__suptitle {
+    margin-top: 104px;
+  }
+}
+@media (min-width: 768px) {
   .header .hero__title {
     max-width: 890px;
     margin: 32px auto 95px auto;
@@ -496,11 +510,17 @@ button:hover {
   row-gap: 20px;
   justify-content: center;
 }
+@media (min-width: 1024px) {
+  .header .hero__buttons {
+    margin-bottom: 185px;
+  }
+}
 
 .main {
   padding: 10px 15px;
   background-color: #eafbff;
   margin: auto;
+  max-width: none;
 }
 .main__wrapper {
   display: flex;
@@ -521,7 +541,7 @@ button:hover {
 }
 @media (min-width: 1820px) {
   .main__wrapper {
-    width: 90%;
+    max-width: 1400px;
   }
 }
 .main__bg {
@@ -786,7 +806,7 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .about-circle--yellow-bottom {
-    transform: translate(961px, 212px);
+    transform: translate(756px, 281px);
   }
 }
 .about__image {
@@ -873,7 +893,7 @@ button:hover {
   border-radius: 6px;
   margin: 0 auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .filter__buttons {
     flex-direction: row;
     width: 580px;
@@ -890,7 +910,7 @@ button:hover {
   row-gap: 15px;
   margin: 78px auto 96px auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .filter__images {
     width: auto;
     grid-template-columns: repeat(2, 1fr);
@@ -903,15 +923,14 @@ button:hover {
   }
 }
 .filter__images img {
-  width: 100%;
   transition: filter 0.3s ease-in-out;
 }
 .filter__images img:hover {
   filter: drop-shadow(2px 4px 6px #00788a);
 }
-@media (min-width: 1820px) {
+@media (min-width: 375px) {
   .filter__images img {
-    width: 400px;
+    width: 100%;
   }
 }
 .filter .button--view-all {
@@ -924,7 +943,7 @@ button:hover {
 }
 .achievement__wrapper {
   position: relative;
-  margin: 100px 20px;
+  margin: 100px 10px;
 }
 @media (min-width: 1024px) {
   .achievement__wrapper {
@@ -936,19 +955,24 @@ button:hover {
   flex-direction: column;
   gap: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .achievement__numbers {
     flex-direction: row;
+    gap: 10px;
   }
 }
 @media (min-width: 1024px) {
   .achievement__numbers {
-    flex-direction: row;
-    gap: 10px;
     padding: 30px 0;
   }
 }
-@media (min-width: 768px) {
+.achievement__title {
+  margin: 0;
+}
+.achievement__text {
+  margin: 43px auto 87px auto;
+}
+@media (min-width: 640px) {
   .achievement__text {
     position: absolute;
     text-align: left;
@@ -966,7 +990,7 @@ button:hover {
 .achievement .numbers__box:hover {
   filter: saturate(8);
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .achievement .numbers__box {
     height: 100px;
     align-self: end;
@@ -1067,7 +1091,7 @@ button:hover {
 @media (min-width: 1024px) {
   .team__bg {
     width: 716px;
-    height: 490px;
+    height: 414px;
     bottom: -28px;
     right: 6px;
   }
@@ -1077,7 +1101,7 @@ button:hover {
     width: 969px;
     height: 528px;
     bottom: -28px;
-    right: -147px;
+    right: -40px;
   }
 }
 .team__member__img {
@@ -1119,6 +1143,11 @@ button:hover {
 .partners {
   margin: 222px auto 80px auto;
 }
+@media (min-width: 1024px) {
+  .partners {
+    margin: 222px auto 191px auto;
+  }
+}
 .partners__wrapper {
   display: flex;
   flex-direction: column;
@@ -1140,6 +1169,7 @@ button:hover {
 @media (min-width: 768px) {
   .partners__list {
     gap: 20px;
+    flex-wrap: nowrap;
   }
 }
 @media (min-width: 1024px) {
@@ -1150,7 +1180,7 @@ button:hover {
     margin-bottom: 50px;
     width: 100%;
     align-items: center;
-    margin: 125px auto 51px auto;
+    margin: 82px auto 51px auto;
   }
 }
 .partners__list img {
@@ -1214,6 +1244,11 @@ button:hover {
 @media (min-width: 1024px) {
   .testimonials__quote {
     padding: 0;
+    margin-left: 40px;
+  }
+}
+@media (min-width: 1400px) {
+  .testimonials__quote {
     margin-left: 90px;
   }
 }
@@ -1416,6 +1451,11 @@ button:hover {
 @media (min-width: 1024px) {
   .footer__wrapper, .footer__menu__wrapper {
     padding-top: 12%;
+  }
+}
+@media (min-width: 1820px) {
+  .footer__wrapper, .footer__menu__wrapper {
+    padding-top: 150px;
   }
 }
 @media (min-width: 1024px) {

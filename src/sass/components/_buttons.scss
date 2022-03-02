@@ -12,6 +12,7 @@
 	&--hero {
 		background-color: colors.$aqua-blue;
 		color: colors.$white;
+		transition: filter 0.2s;
 
 		&:hover {
 			filter: drop-shadow(2px 7px 6px colors.$aqua-blue);
@@ -39,7 +40,6 @@
 
 	&--white {
 		background-color: colors.$white;
-		width: 177px;
 		padding: 24px 36px;
 		transition: background-color 0.5s ease-out;
 

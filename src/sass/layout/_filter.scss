@@ -27,7 +27,7 @@
 		border-radius: 6px;
 		margin: 0 auto;
 
-		@include sc-breakpoint(768) {
+		@include sc-breakpoint(640) {
 			flex-direction: row;
 			width: 580px;
 		}
@@ -43,7 +43,7 @@
 		row-gap: 15px;
 		margin: 78px auto 96px auto;
 
-		@include sc-breakpoint(768) {
+		@include sc-breakpoint(640) {
 			width: auto;
 			grid-template-columns: repeat(2, 1fr);
 			column-gap: 20px;
@@ -54,15 +54,14 @@
 		}
 
 		img {
-			width: 100%;
 			transition: filter 0.3s ease-in-out;
 
 			&:hover {
 				filter: drop-shadow(2px 4px 6px colors.$dark-blue);
 			}
 
-			@include sc-breakpoint(1820) {
-				width: 400px;
+			@include sc-breakpoint(375) {
+				width: 100%;
 			}
 		}
 	}

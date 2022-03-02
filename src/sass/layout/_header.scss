@@ -36,7 +36,7 @@
 				top: 200px;
 				transform: translate(300%, 100%);
 
-				@include sc-breakpoint(1024) {
+				@include sc-breakpoint(768) {
 					top: 600px;
 					right: 220px;
 				}
@@ -46,7 +46,7 @@
 				top: 100px;
 				transform: translate(-700%, 100%);
 
-				@include sc-breakpoint(1024) {
+				@include sc-breakpoint(768) {
 					top: 120px;
 					right: 150px;
 					transform: none;
@@ -57,7 +57,7 @@
 				transform: translate(600%, 100%);
 				top: 80px;
 
-				@include sc-breakpoint(1024) {
+				@include sc-breakpoint(768) {
 					top: 400px;
 					left: 50px;
 				}
@@ -68,7 +68,7 @@
 			transform: translate(150%, 100%);
 			width: 50px;
 
-			@include sc-breakpoint(1024) {
+			@include sc-breakpoint(768) {
 				top: 550px;
 				transform: translate(50%, 0%);
 				width: 30px;
@@ -80,7 +80,7 @@
 			&--skewed {
 				transform: translate(-180%, 40%);
 
-				@include sc-breakpoint(1024) {
+				@include sc-breakpoint(768) {
 					transform: translate(90%, 70%);
 					left: 0;
 				}
@@ -89,7 +89,7 @@
 			&--squigle {
 				transform: translate(80%, 40%);
 
-				@include sc-breakpoint(1024) {
+				@include sc-breakpoint(768) {
 					transform: translate(-40%, 240%);
 					bottom: 0;
 					right: 0;
@@ -101,12 +101,20 @@
 	.hero {
 		margin: 20px;
 
-		@include sc-breakpoint(1024) {
+		@include sc-breakpoint(768) {
 			margin: 50px;
 		}
 
+		&__suptitle {
+			margin-top: 74px;
+
+			@include sc-breakpoint(768) {
+				margin-top: 104px;
+			}
+		}
+
 		&__title {
-			@include sc-breakpoint(1024) {
+			@include sc-breakpoint(768) {
 				max-width: 890px;
 				margin: 32px auto 95px auto;
 			}
@@ -116,6 +124,10 @@
 			display: grid;
 			row-gap: 20px;
 			justify-content: center;
+
+			@include sc-breakpoint(1024) {
+				margin-bottom: 185px;
+			}
 		}
 	}
 }

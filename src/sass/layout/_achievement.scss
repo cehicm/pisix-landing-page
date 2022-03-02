@@ -7,7 +7,7 @@
 
 	&__wrapper {
 		position: relative;
-		margin: 100px 20px;
+		margin: 100px 10px;
 
 		@include sc-breakpoint(1024) {
 			margin: 0 auto 190px auto;
@@ -19,19 +19,24 @@
 		flex-direction: column;
 		gap: 20px;
 
-		@include sc-breakpoint(768) {
+		@include sc-breakpoint(640) {
 			flex-direction: row;
+			gap: 10px;
 		}
 
 		@include sc-breakpoint(1024) {
-			flex-direction: row;
-			gap: 10px;
 			padding: 30px 0;
 		}
 	}
 
+	&__title {
+		margin: 0;
+	}
+
 	&__text {
-		@include sc-breakpoint(768) {
+		margin: 43px auto 87px auto;
+
+		@include sc-breakpoint(640) {
 			position: absolute;
 			text-align: left;
 			left: 0;
@@ -52,7 +57,7 @@
 				filter: saturate(8);
 			}
 
-			@include sc-breakpoint(768) {
+			@include sc-breakpoint(640) {
 				height: 100px;
 				align-self: end;
 			}
