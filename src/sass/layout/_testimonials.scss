@@ -5,7 +5,6 @@
 	margin-top: 60px;
 
 	@include sc-breakpoint(1024) {
-		width: 80%;
 		margin: 0 auto;
 	}
 
@@ -21,9 +20,9 @@
 	}
 
 	&__title {
-		margin-top: 0;
 		@include sc-breakpoint(1024) {
 			width: 200px;
+			margin-bottom: 0;
 		}
 	}
 
@@ -31,11 +30,18 @@
 		@include sc-breakpoint(1024) {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
+			align-items: center;
 		}
 	}
 
 	&__quote {
+		padding: 20px 40px;
 		grid-column: 1/-1;
+
+		@include sc-breakpoint(1024) {
+			padding: 0;
+			margin-left: 90px;
+		}
 	}
 
 	.customer {
@@ -48,6 +54,7 @@
 			@include sc-breakpoint(1024) {
 				display: flex;
 				align-items: center;
+				margin: 50px 0;
 			}
 		}
 
@@ -74,7 +81,8 @@
 			}
 
 			@include sc-breakpoint(1400) {
-				width: 60%;
+				width: 76%;
+				padding-bottom: 44px;
 			}
 		}
 
@@ -90,6 +98,8 @@
 			&__emoji {
 				position: absolute;
 				width: 150px;
+				top: 40px;
+				right: 400px;
 			}
 
 			&__placeholder {
@@ -134,7 +144,7 @@
 					grid-column: 5;
 
 					@include sc-breakpoint(1024) {
-						grid-column: 10;
+						grid-column: 9;
 					}
 				}
 
@@ -142,7 +152,7 @@
 					grid-column: 8;
 
 					@include sc-breakpoint(1024) {
-						grid-column: 11;
+						grid-column: 10;
 					}
 				}
 			}

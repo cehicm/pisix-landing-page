@@ -1175,7 +1175,6 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .testimonials {
-    width: 80%;
     margin: 0 auto;
   }
 }
@@ -1190,22 +1189,28 @@ button:hover {
     width: auto;
   }
 }
-.testimonials__title {
-  margin-top: 0;
-}
 @media (min-width: 1024px) {
   .testimonials__title {
     width: 200px;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1024px) {
   .testimonials__content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    align-items: center;
   }
 }
 .testimonials__quote {
+  padding: 20px 40px;
   grid-column: 1/-1;
+}
+@media (min-width: 1024px) {
+  .testimonials__quote {
+    padding: 0;
+    margin-left: 90px;
+  }
 }
 .testimonials .customer__info h3,
 .testimonials .customer__info p {
@@ -1215,6 +1220,7 @@ button:hover {
   .testimonials .customer__info {
     display: flex;
     align-items: center;
+    margin: 50px 0;
   }
 }
 .testimonials .customer__profile {
@@ -1236,7 +1242,8 @@ button:hover {
 }
 @media (min-width: 1400px) {
   .testimonials .customer__review {
-    width: 60%;
+    width: 76%;
+    padding-bottom: 44px;
   }
 }
 .testimonials .customer__image {
@@ -1252,6 +1259,8 @@ button:hover {
 .testimonials .customer__image__emoji {
   position: absolute;
   width: 150px;
+  top: 40px;
+  right: 400px;
 }
 .testimonials .customer__image__placeholder {
   background: linear-gradient(229.5deg, #ffffff 25.09%, #d7f2f9 101.5%);
@@ -1288,7 +1297,7 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .testimonials .customer.slick-initialized.slick-slider .arrow--prev {
-    grid-column: 10;
+    grid-column: 9;
   }
 }
 .testimonials .customer.slick-initialized.slick-slider .arrow--next {
@@ -1296,7 +1305,7 @@ button:hover {
 }
 @media (min-width: 1024px) {
   .testimonials .customer.slick-initialized.slick-slider .arrow--next {
-    grid-column: 11;
+    grid-column: 10;
   }
 }
 .testimonials .button--aqua-text svg {
